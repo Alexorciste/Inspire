@@ -1,2 +1,19 @@
 <h1>Projects#index</h1>
 <p>Find me in app/views/projects/index.html.erb</p>
+<ul>
+
+<% @projects.each do |project| %>
+<ul>
+<li><%= project.title %></li>
+<%= link_to 'Show', project %>
+        <% if policy(project).edit? %>
+          <%= link_to 'Edit', edit_project_path(project) %>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+</ul>
+<% end %>
+
+
+<% if policy(Project).create? %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>

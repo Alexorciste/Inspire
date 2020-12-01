@@ -53,6 +53,6 @@ class TextsController < ApplicationController
   end
 
   def text_params
-    params.require(:text).permit(:title) # <== le (..., :content) de action text.
+    params.require(:text).permit(:title, :content) # <== le (..., :content) de action text.
   end
 end

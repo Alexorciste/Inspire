@@ -1,5 +1,18 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<h1>Project.title</h1>
+
 <p><%= @project.title %></p>
+<ul>
+<% @project.texts.each do |text| %>
+      <li><%= text.title %></li>
+      <%= link_to 'Show', sekret_text_path(text) %>
+      <%= link_to 'Edit', edit_sekret_text_path(text) %>
+      <!-- %= link_to 'Edit', edit_project_text_path(@project) %> -->
+      <%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</ul>
+
+
+  <%= link_to 'New Text', new_project_text_path(@project) %>
+
 
 <p><%= link_to 'Back', projects_path %></p>

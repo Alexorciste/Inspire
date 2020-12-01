@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @texts = policy_scope(Text)
   end
 
   def new
@@ -28,7 +29,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-     if @project.update(project_params)
+    if @project.update(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'
     else
       render :edit
@@ -37,8 +38,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to projects_url, notice: 'Project was successfully destroyed.'
-
+    redirect_to projects_path, notice: 'Project was successfully destroyed.'
   end
 
   private

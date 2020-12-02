@@ -25,6 +25,7 @@ require("@rails/actiontext")
 
 // External imports
 import "bootstrap";
+import { openNav } from '../components/opendiv';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,5 +33,7 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  openNav();
+  
 });
 

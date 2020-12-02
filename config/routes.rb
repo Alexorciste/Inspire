@@ -6,12 +6,11 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :texts, only: [:index, :update, :new, :create]
+    resources :bands, only: [:new, :create]
   end
 
   scope shallow_prefix: "sekret" do
-  resources :projects do
     resources :texts, only: [:edit, :show], shallow: true
-  end
 end
   resources :texts, only: [:destroy]
    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

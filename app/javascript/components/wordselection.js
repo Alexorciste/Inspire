@@ -1,4 +1,4 @@
-import { inputChangeSelector } from "@rails/ujs";
+
 
 const wordSelector = () => {
     

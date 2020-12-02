@@ -6,7 +6,6 @@
 .box{
     right:0px;
 	top: 150px;
-	position: absolute;
 	z-index: 1;
 	background-color: white;
 	border-top-left-radius: 20px;
@@ -15,11 +14,17 @@
 	height: 300px;
 	opacity: 0.8;
     border: solid 1px black;
-    position: absolute;
+	position: absolute;
+	transition: 0.8s;
     
     
 
      p {
          color: black;
      }
+}
+
+.box.active {
+	width: 50%;
+	transition: 0.8s;
 }

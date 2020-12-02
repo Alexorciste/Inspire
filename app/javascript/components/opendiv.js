@@ -3,8 +3,9 @@ const openNav = () => {
     const redButton = document.querySelector(".btn-danger");
     const divBox = document.querySelector(".box");
     redButton.addEventListener("click", (event) => {
-      divBox.style.width = "50%";
-      divBox.style.transition = "0.8s";
+      divBox.classList.toggle("active");
+      // divBox.style.width = "50%";
+      // divBox.style.transition = "0.8s";
 
       
     });

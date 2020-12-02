@@ -43,6 +43,8 @@ class TextsController < ApplicationController
     redirect_to project_path(@text.project_id), notice: 'Text was successfully destroyed.'
   end
 
+
+
   private
 
   def set_text

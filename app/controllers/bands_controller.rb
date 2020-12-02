@@ -35,7 +35,10 @@ class BandsController < ApplicationController
     end
   end
 
-  def edit
+  def search
+    @bands = Band.all
+    @bands = Band.where(project_id: Project.find(params[:project_id]))
+    authorize @bands
   end
 
   def update

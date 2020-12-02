@@ -1,0 +1,15 @@
+
+<div class="box">
+
+<h3>Récap de mes projets</h3>
+<p><%= @project.title %></p>
+<ul>
+<% @project.texts.each do |text| %>
+      <li><%= text.title %></li>
+      <%= link_to 'Show', sekret_text_path(text) %>
+      <%= link_to 'Edit', edit_sekret_text_path(text) %>
+      <!-- %= link_to 'Edit', edit_project_text_path(@project) %> -->
+      <%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</ul>
+</div>

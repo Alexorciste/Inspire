@@ -11,7 +11,10 @@
 <% end %>
 </ul>
 
-
+<% if @project.bands.length > 0 %>
+<p><%= link_to 'Edit Band', new_project_band_path(@project) %></p>
+<% else %>
 <p><%= link_to 'New Band', new_project_band_path(@project) %></p>
+<% end %>
 <p><%= link_to 'New Text', new_project_text_path(@project) %></p>
 <p><%= link_to 'Back', projects_path %></p>

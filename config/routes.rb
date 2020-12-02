@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :texts, only: [:index, :update, :new, :create]
-    resources :bands, only: [:new, :create]
+    resources :bands, only: [:new, :create, :edit]
   end
 
   scope shallow_prefix: "sekret" do

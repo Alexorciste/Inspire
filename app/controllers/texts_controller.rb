@@ -1,5 +1,5 @@
 class TextsController < ApplicationController
-  before_action :set_text, only: [:show, :edit, :update, :destroy]
+  before_action :set_text, only: [:show, :edit, :update, :destroy ]
 
   def index
     @texts = policy_scope(Text)
@@ -41,6 +41,9 @@ class TextsController < ApplicationController
   def destroy
     @text.destroy
     redirect_to project_path(@text.project_id), notice: 'Text was successfully destroyed.'
+  end
+
+  def fetchword
   end
 
   private

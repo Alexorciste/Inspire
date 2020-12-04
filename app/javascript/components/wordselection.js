@@ -48,7 +48,7 @@ const wordSelector = () => {
             //     console.log(event.currenTarget);
             // });
 
-            fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+            fetch(`https://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
                 .then((response) => {  
                     return response.json();
                 }).then((data) => {

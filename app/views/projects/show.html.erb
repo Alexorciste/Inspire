@@ -1,17 +1,20 @@
-<h1>Project.title</h1>
+<div class="pr-content">
 
-<p><%= @project.title %></p>
+<h1><%= @project.title %></h1>
+
+<p></p>
 <ul>
 <% @project.texts.each do |text| %>
       <li><%= text.title %></li>
-      <%= link_to 'Show', sekret_text_path(text) %>
-      <%= link_to 'Edit', edit_sekret_text_path(text) %>
+      <%= link_to 'Voir', sekret_text_path(text) %>
+      <%= link_to 'Modifier', edit_sekret_text_path(text) %>
       <!-- %= link_to 'Edit', edit_project_text_path(@project) %> -->
-      <%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Détruire', text, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' } %>
 <% end %>
 </ul>
 
 
-<p><%= link_to 'New Band', new_project_band_path(@project) %></p>
-<p><%= link_to 'New Text', new_project_text_path(@project) %></p>
-<p><%= link_to 'Back', projects_path %></p>
+<p><%= link_to 'Nouveau groupe', new_project_band_path(@project) %> | 
+<%= link_to 'Nouveau texte', new_project_text_path(@project) %></p>
+<p><%= link_to 'Retour', projects_path, class: "btn btn-dark" %></p>
+</div>

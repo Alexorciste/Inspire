@@ -27,16 +27,16 @@ require("@rails/actiontext")
 import "bootstrap";
 import { openNav } from '../components/opendiv';
 import { wordSelector } from '../components/wordselection';
-import { synonymeScraping } from '../components/fetchword';
+// import { synonymeScraping } from '../components/fetchword';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  initSelect2();
-  openNav();
+  // initSelect2();
+  // openNav();
   wordSelector();
-  synonymeScraping();
+  // synonymeScraping();
 
 });
 

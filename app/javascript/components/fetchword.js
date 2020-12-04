@@ -2,7 +2,7 @@ const synonymeScraping = () => {
 
   
   document.querySelector('#fetch-btn').addEventListener('click', (event) => {
-        fetch('http://localhost:3000/api/v1/synonymes?keyword=ordinateur')
+        fetch(`http://localhost:3000/api/v1/synonymes?keyword=${keyWord}`)
         .then((response) => {
     // The API call was successful!
                     return response.json();

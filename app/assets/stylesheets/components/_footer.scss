@@ -5,7 +5,6 @@
   justify-content: center;
   height: 90px;
   padding: 0px 50px;
-  margin-top: 40px;
 }
 .footer-links {
   display: flex;
@@ -60,3 +59,17 @@ font-family: 'Roboto', sans-serif;
 .color-inspire:hover {
   color: #e99655;
 }
+
+.d-flex {
+  min-height: 77vh;
+  margin-bottom: 22px;
+}
+
+.footer-home {
+  display: none;
+}
+
+.footer-copyright{
+  display: none;
+}
+

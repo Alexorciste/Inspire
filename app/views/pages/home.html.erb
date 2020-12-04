@@ -1,3 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= content_for(:navbar_class, "navbar-home") %>
+<div class="banner">
+  <div class="banner-content text-center">
+<h2> Composez votre Texte</h2>
+<%= link_to "Commencez", new_user_session_path, class: "btn btn-lg btn-primary"  %>
+</div>
+</div>
+<%= content_for(:footer_class, "footer-home") %>
+
 

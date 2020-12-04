@@ -1,27 +1,39 @@
 .form-login {
   background: white;
   padding: 10px 20px;
-  margin-top: 50px;
+  margin-top: 84px;
   border-radius: 3px;
   box-shadow: -2px 4px 13px 7px rgba(0, 0, 0, 0.1);
-  h2 {
+h2 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
-font-family: 'Quicksand', sans-serif;
-color: #e99655;
+    font-family: 'Quicksand', sans-serif;
+    color: #584238;
   }
-  .btn {
+.btn {
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+  }
+a {
+    color: #151f21;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+  color: #584238;
   }
 }
 
 .btn-primary {
-  background: #e99655;
-  border-color: #e99655;
-  height: 5vh;
+  background: #584238;
+  border-color: #584238;
+}
+
+.btn-primary:hover {
+  background: #151f21;
+  border-color: #151f21;
 }
 
 body {
@@ -58,7 +70,7 @@ border: 1px solid #167ffb;
   display: flex;
   justify-content: center;
   margin-top: -16px;
-  color: #e99655;
+  color: #584238;
 
 }
 
@@ -66,13 +78,23 @@ border: 1px solid #167ffb;
   display: flex;
   justify-content: center;
   margin-top: -16px;
-  color: #e99655;
+  color: #584238;
 }
 
 .fa-sign-in-alt {
   display: flex;
   justify-content: center;
   margin-top: -16px;
-  color: #e99655;
+  color: #584238;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary.active:not(:disabled):not(.disabled),
+.show > .btn-primary.dropdown-toggle {
+
+color: #fff;
+background-color: #584238;
+border-color: #584238;
+
 }
 

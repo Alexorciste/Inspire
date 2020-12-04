@@ -1,17 +1,59 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  .nav-link-color {
+    color: #151f21;
+  }
+  .title{
+    font-family: 'Quicksand', sans-serif;
+    color: #151f21;
+    font-family: 'Major Mono Display', monospace;
+    justify-content: space-between;
+    }
+
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .title{
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 60px;
+    }
+  .nav-link-color{
+    color: white;
+    margin-right: 10px;
+  }
+
+
 }
+
+
+//.navbar-lewagon .navbar-collapse {
+// flex-grow: 0;
+//}
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 
-.title {
-  font-family: 'Quicksand', sans-serif;
-  
+.navbar-light .navbar-nav .nav-link {
+    color: white;
 }
+
+
+//.navbar-collapse {
+//   min-width: 470px;
+//    display: flex;
+//    /* text-align: right; */
+//    align-items: center;
+//    justify-content: flex-end;
+//}
+
+.nav-link-color {
+ flex-grow: 1;
+}
+

@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= yield(:navbar_class) %>">
+<div class="navbar navbar-expand-sm  navbar-lewagon <%= yield(:navbar_class) %>">
   <%= link_to "Home", "#",class: " nav-link-color"  %>
 
 
@@ -9,7 +9,7 @@
 <h1 class="title">INSPIRE</h1>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <ul class="">
+    <ul class="mr-auto-new">
       <% if user_signed_in? %>
         <span class=" nav-link-color">Bienvenue <%= current_user.nickname %></span>
 

@@ -26,6 +26,7 @@
   .nav-link-color{
     color: white;
     margin-right: 10px;
+    flex-grow: 2;
   }
 
 
@@ -33,7 +34,7 @@
 
 
 //.navbar-lewagon .navbar-collapse {
-// flex-grow: 0;
+//flex-grow: 0;
 //}
 
 .navbar-lewagon .navbar-brand img {
@@ -45,15 +46,23 @@
 }
 
 
-//.navbar-collapse {
-//   min-width: 470px;
-//    display: flex;
-//    /* text-align: right; */
-//    align-items: center;
-//    justify-content: flex-end;
-//}
+.navbar-collapse {
+   min-width: 498px;
+   display: flex;
+   text-align: right;
+ align-items: center;
+  justify-content: flex-end;
+}
 
 .nav-link-color {
  flex-grow: 1;
 }
 
+.nav-item {
+  list-style: none;
+}
+
+
+.mr-auto-new {
+  display: flex
+}

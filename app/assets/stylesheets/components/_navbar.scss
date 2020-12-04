@@ -3,6 +3,7 @@
   background-color: transparent;
   .nav-link-color {
     color: #151f21;
+   flex-grow: 1;
   }
   .title{
     font-family: 'Quicksand', sans-serif;
@@ -26,6 +27,7 @@
   .nav-link-color{
     color: white;
     margin-right: 10px;
+   flex-grow: 1.7;
   }
 
 
@@ -33,7 +35,7 @@
 
 
 //.navbar-lewagon .navbar-collapse {
-// flex-grow: 0;
+//flex-grow: 1.5;
 //}
 
 .navbar-lewagon .navbar-brand img {
@@ -45,15 +47,24 @@
 }
 
 
-//.navbar-collapse {
-//   min-width: 470px;
+.navbar-collapse {
+ min-width: 490px;
 //    display: flex;
-//    /* text-align: right; */
-//    align-items: center;
-//    justify-content: flex-end;
+text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+//.nav-link-color {
+// flex-grow: 1.7;
 //}
 
-.nav-link-color {
- flex-grow: 1;
+.mr-auto-new {
+display: flex;
+list-style: none;
+text-align: center;
+margin-left: -30px;
 }
+
+
 

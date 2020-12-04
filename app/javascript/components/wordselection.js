@@ -33,17 +33,34 @@ const wordSelector = () => {
 
             const divBox = document.querySelector("#results");
             divBox.classList.add("active");
+            
+
+            divBox.querySelectorAll("li").forEach((li) => {
+                console.log(li);
+                li.addEventListener("click", (event) => {
+                    console.log(event);
+                });
+
+            });
+
+
+            // liClick.addEventListener("click",  (event) => {
+            //     console.log(event.currenTarget);
+            // });
 
             fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
                 .then((response) => {  
                     return response.json();
                 }).then((data) => {
                       // This is the HTML from our response as a text string
+                      let index = 0
                       divBox.innerHTML = " ";
+                      
                         data.forEach((result) => {
 
                             
-                            divBox.insertAdjacentHTML("beforeend", `<li>${result}</li>` )
+                            divBox.insertAdjacentHTML("beforeend", `<li id="${index}">${result}</li>` )
+                            index++;
                         })
                         console.log(data);
                         return data;

@@ -3,10 +3,10 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
+    <%= f.input :title, :label => "Titre" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :value => "Enregistrer", class: "btn btn-dark" %>
   </div>
 <% end %>

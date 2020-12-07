@@ -1,9 +1,15 @@
-// import { synonymeScraping } from 'fetchword'; 
+import { synonymScrapping, rightPannelListener } from './fetchword'; 
+
+import {
+    contextMenu
+} from "./contextmenu";
+
+
 
 const wordSelector = () => {
 
     const listenKey = document.querySelector("#text_content");
-    
+
     if (listenKey) {
         let listSpan = [];
         listenKey.addEventListener("keyup", (event) => {
@@ -19,53 +25,10 @@ const wordSelector = () => {
                 test.insertAdjacentHTML("beforeend", `<span id="span${index}">${word} </span>`)
             });
 
-            test.querySelectorAll("span").forEach((span) => {
-                console.log(span);
-                span.addEventListener("click", (event) => {
+            // pannelright
+            rightPannelListener(test);
 
-                    const clickWord = event.currentTarget
-                    const keyWord = clickWord.innerText;
-                    const divBox = document.querySelector("#results");
-
-                    divBox.classList.add("active");
-
-                    fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-                        .then((response) => {
-                            return response.json();
-                        }).then((data) => {
-                            // This is the HTML from our response as a text string
-                            let index = 0
-                            divBox.innerHTML = " ";
-
-                            data.forEach((result) => {
-                                divBox.insertAdjacentHTML("beforeend", `<span id="span${index}">${result} </span><br />`)
-                                index++;
-                            })
-
-                            divBox.querySelectorAll("span").forEach((span) => {
-                                span.addEventListener("click", (event) => {
-                                    const newWord = event.currentTarget.innerText;
-                                    clickWord.innerText = newWord + " ";
-                                    changeValueInput();
-                                    divText.innerText = test.innerText;
-                                
-
-                                });
-
-                            });
-
-                            console.log(data);
-                            return data;
-                        }).catch(function (err) {
-
-                            console.warn('Something went wrong.', err);
-                        });
-
-                });
-
-            });
-
-            const changeValueInput = () => {
+            
                 const finalString = array.join(" ")
                 const urlcourante = document.location.href;
                 const regex = /\/(\d+)\/[e]/;
@@ -77,7 +40,7 @@ const wordSelector = () => {
                     document.querySelector("#text_content_trix_input_text").value = `<div>${finalString}</div>`
                 };
 
-            };
+        
 
         });
 

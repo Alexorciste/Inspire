@@ -6,6 +6,7 @@ class BandPolicy < ApplicationPolicy
   end
 
   def search?
+    #raise
     true
   end
 

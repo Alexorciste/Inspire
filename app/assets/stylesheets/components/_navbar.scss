@@ -10,6 +10,13 @@
     font-family: 'Major Mono Display', monospace;
     justify-content: space-between;
     }
+.navbar-collapse {
+//min-width: 498px;
+display: flex;
+text-align: right;
+align-items: center;
+justify-content: flex-end;
+}
 
 }
 
@@ -21,13 +28,13 @@
   .title{
     color: white;
     font-family: 'Major Mono Display', monospace;
-    font-size: 60px;
+  //  font-size: 60px;
     }
-  .nav-link-color{
-    color: white;
-    margin-right: 10px;
-    flex-grow: 2;
-  }
+ .nav-link-color{
+color: white;
+margin-right: 10px;
+flex-grow: 2;
+}
 
 
 }
@@ -37,9 +44,9 @@
 //flex-grow: 0;
 //}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+//.navbar-lewagon .navbar-brand img {
+//  width: 40px;
+//}
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -47,16 +54,16 @@
 
 
 .navbar-collapse {
-   min-width: 498px;
-   display: flex;
+//min-width: 480px;
+display: flex;
    text-align: right;
  align-items: center;
-  justify-content: flex-end;
+justify-content: flex-end;
 }
 
-.nav-link-color {
- flex-grow: 1;
-}
+//.nav-link-color {
+// flex-grow: 1;
+//}
 
 .nav-item {
   list-style: none;

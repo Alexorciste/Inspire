@@ -1,6 +1,7 @@
 require 'uri'
 require 'nokogiri'
 require 'pry-byebug'
+require 'json'
 
 class Rime
   attr_accessor :expr, :datafile, :len
@@ -138,7 +139,9 @@ class Rime
     for i in @first..@last
        results << @data[i][0].split("\t")[1].encode("utf-8")
     end
+    # puts results
+    final_result = results.to_json
     # results est un Array
-    print results
+    puts final_result
   end
 end

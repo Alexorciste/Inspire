@@ -26,22 +26,23 @@ const wordSelector = () => {
         });
         
             test.querySelectorAll("span").forEach((span) => {
-            console.log(span);
-            span.addEventListener("click",  (event) => {
+                console.log(span);
+                span.addEventListener("click",  (event) => {
                 
-            const keyWord = event.currentTarget.innerHTML;
-
-            const divBox = document.querySelector("#results");
-            divBox.classList.add("active");
+                const clickWord = event.currentTarget
+                const keyWord = clickWord.innerText;
+                const divBox = document.querySelector("#results");
+                divBox.classList.add("active");
             
 
-            divBox.querySelectorAll("li").forEach((li) => {
-                console.log(li);
-                li.addEventListener("click", (event) => {
-                    console.log(event);
-                });
+                // divBox.querySelectorAll("li").forEach((li) => {
+                // console.log(li);
+                // li.addEventListener("click", (event) => {
+                //     console.log(event);
+            //  });
+                
 
-            });
+            // });
 
 
             // liClick.addEventListener("click",  (event) => {
@@ -59,9 +60,21 @@ const wordSelector = () => {
                         data.forEach((result) => {
 
                             
-                            divBox.insertAdjacentHTML("beforeend", `<li id="${index}">${result}</li>` )
+                            divBox.insertAdjacentHTML("beforeend", `<span id="span${index}">${result} </span><br />` )
                             index++;
                         })
+
+                         divBox.querySelectorAll("span").forEach((span) => {
+                                span.addEventListener("click",  (event) => {
+                                    const newWord = event.currentTarget.innerText;
+                                    clickWord.innerText = newWord + " ";
+                               
+                                    
+                                    divText.innerText = test.innerText;
+                                    // divText.parentNode.replaceChild(test, divText);
+                                });
+                                     });
+                                        
                         console.log(data);
                         return data;
                     }).catch(function (err) {
@@ -69,11 +82,14 @@ const wordSelector = () => {
                         console.warn('Something went wrong.', err);
             });
             
+            
+
             });
+            
         });  
        
 
-      const finalString = array.join()
+      const finalString = array.join(" ")
       const urlcourante = document.location.href;
       const regex = /\/(\d+)\/[e]/;
         if (regex.test(urlcourante)) {
@@ -91,8 +107,15 @@ const wordSelector = () => {
     } 
 };
 
+// const liSelector = () => {
+// const divTwo = document.querySelector("#results")
+//            divTwo.querySelectorAll("li").forEach((li) => {
+//                  console.log(li);
+//            });
+//         };
 
 
 export { wordSelector };
+//  export { liSelector };
 
 

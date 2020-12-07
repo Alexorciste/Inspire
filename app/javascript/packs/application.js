@@ -26,15 +26,28 @@ require("@rails/actiontext")
 // External imports
 import "bootstrap";
 import { openNav } from '../components/opendiv';
-import { multipleSelect } from "../components/multiselect.js";
+import { wordSelector } from '../components/wordselection';
+// import { liSelector } from '../components/wordselection';
+// import { synonymeScraping } from '../components/fetchword';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  openNav();
-  multipleSelect();
+  // openNav();
+  wordSelector();
+  // liSelector();
+  // synonymeScraping();
 
 });
 
+
+
+
+// const synonyme = document.getElementById('synonyme-btn')
+// if (synonyme) {
+// synonyme.addEventListener('onclick', () => {
+//   synonymeScraping();
+// )}
+// };

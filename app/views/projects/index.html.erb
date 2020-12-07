@@ -1,15 +1,20 @@
-<h1>Projects</h1>
+
+
+<div class="pr-content">
+<h1>Mes projets</h1>
 
 <ul>
   <% @projects.each do |project| %>
   <li><%= project.title %></li>
-  <%= link_to 'Show', project %>
+  <%= link_to 'Voir', project %>
     <% if policy(project).edit? %>
-      <%= link_to 'Edit', edit_project_path(project) %>
-      <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Modifier', edit_project_path(project) %>
+      <%= link_to 'Détruire', project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' } %>
     <% end %>
   <% end %>
 </ul>
 <% if policy(Project).create? %>
-  <%= link_to 'New Project', new_project_path %>
+  <p><%= link_to 'Créer nouveau projet', new_project_path, class: "btn btn-dark" %></p>
 <% end %>
+</div>
+

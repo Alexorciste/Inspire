@@ -2,6 +2,7 @@
 
 puts "Entre un mot :"
 word = gets.chomp
+
 rime = Rime.new(word)
 
 

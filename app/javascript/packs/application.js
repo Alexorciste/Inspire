@@ -27,6 +27,7 @@ require("@rails/actiontext")
 import "bootstrap";
 import { openNav } from '../components/opendiv';
 import { wordSelector } from '../components/wordselection';
+import { contextMenu } from '../components/contextmenu';
 // import { liSelector } from '../components/wordselection';
 // import { synonymeScraping } from '../components/fetchword';
 // Internal imports, e.g:
@@ -37,6 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // openNav();
   wordSelector();
+  contextMenu();
   // liSelector();
   // synonymeScraping();
 

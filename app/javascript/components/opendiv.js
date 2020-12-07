@@ -1,7 +1,7 @@
 const openNav = () => {
    
-    const redButton = document.querySelector(".btn-danger");
-    const divBox = document.querySelector(".box");
+    
+    const divBox = document.querySelector("#results");
     redButton.addEventListener("click", (event) => {
       divBox.classList.toggle("active");
       

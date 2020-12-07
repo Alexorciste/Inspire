@@ -5,6 +5,11 @@ class BandPolicy < ApplicationPolicy
     end
   end
 
+  def search?
+    #raise
+    true
+  end
+
   def create?
     true
   end

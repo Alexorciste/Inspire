@@ -6,6 +6,10 @@ class TextPolicy < ApplicationPolicy
   end
 
   def show?
+    #raise
+    record.project.bands.each do |band|
+      return true if band[:user_id] == user.id
+    end
     record.project.user == user
   end
 
@@ -14,6 +18,11 @@ class TextPolicy < ApplicationPolicy
   end
 
   def update?
+    record.project.bands.each do |band|
+      if band[:user_id] == user.id
+        return band[:write_acces]
+      end
+    end
     record.project.user == user
   end
 

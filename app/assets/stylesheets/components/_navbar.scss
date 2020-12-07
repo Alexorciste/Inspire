@@ -3,6 +3,7 @@
   background-color: transparent;
   .nav-link-color {
     color: #151f21;
+   flex-grow: 1;
   }
   .title{
     font-family: 'Quicksand', sans-serif;
@@ -35,13 +36,22 @@ color: white;
 margin-right: 10px;
 flex-grow: 2;
 }
+  .nav-link-color{
+    color: white;
+    margin-right: 10px;
+
+    flex-grow: 2;
+
+  }
 
 
 }
 
 
 //.navbar-lewagon .navbar-collapse {
+
 //flex-grow: 0;
+
 //}
 
 //.navbar-lewagon .navbar-brand img {
@@ -56,14 +66,30 @@ flex-grow: 2;
 .navbar-collapse {
 //min-width: 480px;
 display: flex;
+
+//   min-width: 498px;
+   display: flex;
+
    text-align: right;
  align-items: center;
 justify-content: flex-end;
 }
 
+
 //.nav-link-color {
 // flex-grow: 1;
 //}
+// flex-grow: 1.7;
+//}
+
+
+.mr-auto-new {
+display: flex;
+list-style: none;
+text-align: center;
+margin-left: -30px;
+}
+
 
 .nav-item {
   list-style: none;
@@ -73,3 +99,4 @@ justify-content: flex-end;
 .mr-auto-new {
   display: flex
 }
+

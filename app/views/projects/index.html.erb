@@ -1,25 +1,34 @@
+ <%# <div class="pr-content"> %>
+
 <div class="big-container">
 
   <div class="bground">
-    <h1>Mes projets</h1>
+    
   </div>
 
-    <%# <div class="pr-content"> %>
+   
 
 
+    
+    <div class = "project-container">
     <!-- <h1>Mes projets</h1> !-->
-    <%# <h1 class="wordCarousel">
-      <span class="word">Mes Projets: </span>
+    <div class = "carousel">
+    
+     <h1 class="wordCarousel">
+      <div class="word">Mes Projets</div>
       <div class="one">
-        <!--        Use classes 2,3, or 4 to match the number of words -->
-        <ul class="flip4">
-          <li>Oh My</li>
-          <li>is-it ?</li>
+         <ul class="flip4">
+        
+          <% @projects.each do |project| %>
+          <li><%= project.title %></li>
+           <% end %>
+          <%# <li>is-it ?</li>
           <li>What</li>
-          <li>God !</li>
+          <li>God !</li> %>
         </ul>
       </div>
-    </h1> %>
+    </h1>
+    </div> 
 
     <div class="project">
       <ul>
@@ -37,6 +46,7 @@
       <% end %>
     </div>
 
-    <%# </div> %>
+     </div> 
   
 </div>
+<%# </div> %>

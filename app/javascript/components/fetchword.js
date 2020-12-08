@@ -1,24 +1,21 @@
-
-export const rightPannelListener = (test) => {
+export const rightPannelListener = (test, wordArray) => {
   const divText = document.querySelector("#text_content > div");
   test.querySelectorAll("span").forEach((span) => {
-      console.log(span);
-      span.addEventListener("click", (event) => {
-         
-          const clickWord = event.currentTarget
-          
-  
-          // fetch scrapping api
-          synonymScrapping(test, divText, clickWord)
-  
-      });
-  
+    
+    span.addEventListener("click", (event) => {
+
+      const clickWord = event.currentTarget
+      // fetch scrapping api
+      synonymScrapping(test, divText, clickWord, wordArray)
+
+    });
+
   });
-  }
+}
 
 
-const synonymScrapping = (test, divText, clickWord) => {
-  
+const synonymScrapping = (test, divText, clickWord, wordArray) => {
+
   const keyWord = clickWord.innerText;
   const divBox = document.querySelector("#results");
 
@@ -29,37 +26,65 @@ const synonymScrapping = (test, divText, clickWord) => {
       return response.json();
     }).then((data) => {
       // This is the HTML from our response as a text string
-      let index = 0
       divBox.innerHTML = " ";
-
-      data.forEach((result) => {
+      data.forEach((result, index) => {
         divBox.insertAdjacentHTML("beforeend", `<span id="span${index}">${result} </span><br />`)
-        index++;
       })
 
       divBox.querySelectorAll("span").forEach((span) => {
         span.addEventListener("click", (event) => {
           const newWord = event.currentTarget.innerText;
-          clickWord.innerText = newWord + " ";
+          console.log("before", wordArray);
 
-          divText.innerText = test.innerText;
+          // clickWord.innerText = newWord + " ";
+          var regex = new RegExp(`${keyWord}`,"i")
+          for(var i=0; i < wordArray.length; i++) {
+            // console.log(keyWord, newWord)
+            wordArray[i] = wordArray[i].replace(regex, newWord);
+           }
 
-           const splitText = divText.innerText.split(/[\s,;:’]+/);
-           test.innerHTML = " ";
-           const array = [];
-           splitText.forEach((word, index) => {
-             array.push(`<span>${word}</span>`);
-            test.insertAdjacentHTML(
-              "beforeend",
-              `<span id="span${index}">${word} </span>`
-            );
-            rightPannelListener(test);
-          });
+          console.log("after", wordArray);
+          
+
+          // let fruits = [‘Apple’, ‘Banana’];
+          // var dep = new RegExp(`${fruits[0]}`,“i”)
+          // const arr = ‘arrivee’
+          // console.log(fruits,arr)
+          // for(var i=0; i < fruits.length; i++) {
+          //  fruits[i] = fruits[i].replace(dep, arr);
+          // }
+          // console.log(fruits,arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          //  divText.innerText = test.innerText;
+          
+          //  const splitText = divText.innerText.split(/[\s,;:’]+/);
+          //  test.innerHTML = " ";
+          //  const array = [];
+          //  splitText.forEach((word, index) => {
+          //    array.push(`<span>${word}</span>`);
+          //    test.insertAdjacentHTML(
+          //     "beforeend",
+          //      `<span id="span${index}">${word} </span>`
+          //    );
+          //   rightPannelListener(test);
+          //    });
 
         });
-
-
-
+        
       });
 
       console.log(data);
@@ -69,9 +94,7 @@ const synonymScrapping = (test, divText, clickWord) => {
       console.warn('Something went wrong.', err);
     });
 
-
 }
-
 
 export {
   synonymScrapping

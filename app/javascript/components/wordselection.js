@@ -32,7 +32,7 @@ const wordSelector = () => {
            
 
             // pannelright
-            rightPannelListener(test, wordArray, action);
+            rightPannelListener(test, wordArray);
 
             // const finalString = wordArray.join(" ")
             // const urlcourante = document.location.href;

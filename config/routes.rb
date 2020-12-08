@@ -19,10 +19,11 @@ Rails.application.routes.draw do
 
   resources :texts, only: [:destroy]
    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-   
+
    namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get "/synonymes", to: "synonymes#find_synonyme"
+      get "/rimes", to: "synonymes#find_rime"
     end
   end
 

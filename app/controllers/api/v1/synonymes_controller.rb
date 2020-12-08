@@ -19,9 +19,7 @@ class Api::V1::SynonymesController < Api::V1::BaseController
   end
 
   def find_rime
-   # rime = Rime.new(params[:keyword])
-    keyword = "clair"
-    rime = Rime.new(keyword)
+    rime = Rime.new(params[:keyword])
     results = []
     results = rime.send if rime.search
     render json: results.to_json

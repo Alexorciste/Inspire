@@ -20,7 +20,7 @@ class TextsController < ApplicationController
     authorize @text
 
     if @text.save
-      redirect_to project_path(@text.project), notice: 'Text was successfully created.'
+      redirect_to project_path(@text.project), notice: 'Le texte a été créé.'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class TextsController < ApplicationController
 
   def update
     if @text.update(text_params)
-      redirect_to project_path(@text.project), notice: 'Text was successfully updated.'
+      redirect_to project_path(@text.project), notice: 'Le texte a été modifié.'
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class TextsController < ApplicationController
 
   def destroy
     @text.destroy
-    redirect_to project_path(@text.project_id), notice: 'Text was successfully destroyed.'
+    redirect_to project_path(@text.project_id), notice: 'Le texte a été supprimé.'
   end
 
   def fetchword

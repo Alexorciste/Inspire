@@ -1,12 +1,17 @@
-export const rightPannelListener = (test, wordArray) => {
+export const rightPannelListener = (test, wordArray, action) => {
   const divText = document.querySelector("#text_content > div");
   test.querySelectorAll("span").forEach((span) => {
     
     span.addEventListener("click", (event) => {
+      menu.style.top = `${e.clientY}px`
+      menu.style.left = `${e.clientX}px`
+      menu.classList.add('show')      
+
 
       const clickWord = event.currentTarget
+      contextMenu();
       // fetch scrapping api
-      synonymScrapping(test, divText, clickWord, wordArray)
+      synonymScrapping(test, divText, clickWord, wordArray, action)
 
     });
 
@@ -14,14 +19,14 @@ export const rightPannelListener = (test, wordArray) => {
 }
 
 
-const synonymScrapping = (test, divText, clickWord, wordArray) => {
+const synonymScrapping = (test, divText, clickWord, wordArray, action) => {
 
   const keyWord = clickWord.innerText;
   const divBox = document.querySelector("#results");
 
   divBox.classList.add("active");
-
-  fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+// fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+   fetch(`http://${window.location.host}/api/v1/${action}?keyword=${keyWord}`)
     .then((response) => {
       return response.json();
     }).then((data) => {
@@ -34,14 +39,20 @@ const synonymScrapping = (test, divText, clickWord, wordArray) => {
       divBox.querySelectorAll("span").forEach((span) => {
         span.addEventListener("click", (event) => {
           const newWord = event.currentTarget.innerText;
-          console.log("before", wordArray);
 
-          // clickWord.innerText = newWord + " ";
-          var regex = new RegExp(`${keyWord}`,"i")
+          clickWord.innerText = newWord + " ";
+
+          var regex = new RegExp(`${keyWord}`,"g")
           for(var i=0; i < wordArray.length; i++) {
-            // console.log(keyWord, newWord)
-            wordArray[i] = wordArray[i].replace(regex, newWord);
-           }
+
+            console.log(keyWord, newWord, wordArray[i]);
+
+            if(keyWord === wordArray[i]) {
+              wordArray[i] = newWord;
+            }
+            console.log("after", wordArray);
+            // wordArray[i] = wordArray[i].replace(regex, newWord);
+          }
 
           console.log("after", wordArray);
           

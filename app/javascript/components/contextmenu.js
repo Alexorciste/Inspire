@@ -17,6 +17,9 @@ const contextMenu = () => {
 
     item.forEach((li) => {
       li.addEventListener('click', (event) => {
+        let selection = li.innerText
+        // console.log(selection);
+        return selection;
         
     })
     

@@ -27,21 +27,23 @@ const wordSelector = () => {
                 test.insertAdjacentHTML("beforeend", `<span id="span${index}">${word} </span>`)
             });
 
+            let action = "rimes"
             contextMenu();
+           
 
             // pannelright
-            rightPannelListener(test, wordArray);
+            rightPannelListener(test, wordArray, action);
 
-            const finalString = wordArray.join(" ")
-            const urlcourante = document.location.href;
-            const regex = /\/(\d+)\/[e]/;
-            if (regex.test(urlcourante)) {
-                const found = urlcourante.match(regex);
-                const textId = '_'.concat(found[1])
-                document.querySelector(`#text_content_trix_input_text${textId}`).value = `<div>${finalString}</div>`
-            } else {
-                document.querySelector("#text_content_trix_input_text").value = `<div>${finalString}</div>`
-            };
+            // const finalString = wordArray.join(" ")
+            // const urlcourante = document.location.href;
+            // const regex = /\/(\d+)\/[e]/;
+            // if (regex.test(urlcourante)) {
+            //     const found = urlcourante.match(regex);
+            //     const textId = '_'.concat(found[1])
+            //     document.querySelector(`#text_content_trix_input_text${textId}`).value = `<div>${finalString}</div>`
+            // } else {
+            //     document.querySelector("#text_content_trix_input_text").value = `<div>${finalString}</div>`
+            // };
 
         });
 

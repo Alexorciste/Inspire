@@ -1,8 +1,17 @@
+<div class="pr-content">
+
 <h1><%= @name %></h1>
 
 <ul>
-<% @band_users.each do |user| %>
-<li><%= user[0][:nickname] %> - <%= user[0][:first_name] %> <%= user[0][:last_name] %> <%= user[1][:write_acces] %></li>
+<%  @band_users.each do |user| %>
+<li><%= user[0][:nickname] %> - <%= user[0][:first_name] %> <%= user[0][:last_name] %>
+
+ <%= user[1][:write_acces] %></li>
+
+
 <!-- <li>%= band.user_id.nickname %>%= band.user_id.first_name %>%= band.user_id.last_name %></li> -->
 <% end %>
 </ul>
+</div>
+
+<p><%= link_to 'Retour', projects_path %></p>

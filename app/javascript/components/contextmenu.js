@@ -1,23 +1,38 @@
 const contextMenu = () => {
-  
-  const clickable = document.querySelector('#test')
+  const spanArray = document.querySelector('#test').querySelectorAll('span')
   const menu = document.querySelector('#menu')
   const outClick = document.getElementById('out-click')
+  const item = menu.querySelectorAll(".menu-item")
+  
 
-    clickable.addEventListener('contextmenu', e => {
-    e.preventDefault()
+  spanArray.forEach((span) => {
+    span.addEventListener('contextmenu', e => {
+      e.preventDefault()
+      menu.style.top = `${e.clientY}px`
+      menu.style.left = `${e.clientX}px`
+      menu.classList.add('show')          
+    })
+  
+  })  
 
-    menu.style.top = `${e.clientY}px`
-    menu.style.left = `${e.clientX}px`
-    menu.classList.add('show')
+    item.forEach((li) => {
+      li.addEventListener('click', (event) => {
+        
+    })
+    
+    
+    })
 
-    outClick.style.display = "block"
-  })
 
-  outClick.addEventListener('click', () => {
-    menu.classList.remove('show')
-    outClick.style.display = "none"
+
+
+
+    document.addEventListener('click', (event) => {
+    
+    menu.classList.remove("show");
   })
 }
 
+
 export { contextMenu }
+

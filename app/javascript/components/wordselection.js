@@ -27,7 +27,7 @@ const wordSelector = () => {
                 test.insertAdjacentHTML("beforeend", `<span id="span${index}">${word} </span>`)
             });
 
-            let action = "rimes"
+            
             contextMenu();
            
 

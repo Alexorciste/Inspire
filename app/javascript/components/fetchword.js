@@ -3,8 +3,13 @@ export const rightPannelListener = (test, wordArray, action) => {
   test.querySelectorAll("span").forEach((span) => {
     
     span.addEventListener("click", (event) => {
+      menu.style.top = `${e.clientY}px`
+      menu.style.left = `${e.clientX}px`
+      menu.classList.add('show')      
+
 
       const clickWord = event.currentTarget
+      contextMenu();
       // fetch scrapping api
       synonymScrapping(test, divText, clickWord, wordArray, action)
 

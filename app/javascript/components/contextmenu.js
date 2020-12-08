@@ -1,4 +1,5 @@
 const contextMenu = () => {
+  
   const spanArray = document.querySelector('#test').querySelectorAll('span')
   const menu = document.querySelector('#menu')
   const outClick = document.getElementById('out-click')
@@ -25,10 +26,6 @@ const contextMenu = () => {
     
     
     })
-
-
-
-
 
     document.addEventListener('click', (event) => {
     

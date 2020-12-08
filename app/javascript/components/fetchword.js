@@ -1,17 +1,13 @@
-export const rightPannelListener = (test, wordArray, action) => {
+export const rightPannelListener = (test, wordArray) => {
   const divText = document.querySelector("#text_content > div");
   test.querySelectorAll("span").forEach((span) => {
     
     span.addEventListener("click", (event) => {
-      menu.style.top = `${e.clientY}px`
-      menu.style.left = `${e.clientX}px`
-      menu.classList.add('show')      
-
-
+      
       const clickWord = event.currentTarget
-      contextMenu();
+      // contextMenu();
       // fetch scrapping api
-      synonymScrapping(test, divText, clickWord, wordArray, action)
+      synonymScrapping(test, divText, clickWord, wordArray)
 
     });
 
@@ -19,15 +15,15 @@ export const rightPannelListener = (test, wordArray, action) => {
 }
 
 
-const synonymScrapping = (test, divText, clickWord, wordArray, action) => {
+const synonymScrapping = (test, divText, clickWord, wordArray) => {
 
   const keyWord = clickWord.innerText;
   const divBox = document.querySelector("#results");
 
   divBox.classList.add("active");
-// fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-   fetch(`http://${window.location.host}/api/v1/${action}?keyword=${keyWord}`)
-    .then((response) => {
+  //  fetch(`http://${window.location.host}/api/v1/${action}?keyword=${keyWord}`)
+    fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+      .then((response) => {
       return response.json();
     }).then((data) => {
       // This is the HTML from our response as a text string

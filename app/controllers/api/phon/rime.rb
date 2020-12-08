@@ -16,18 +16,21 @@ class Rime
     @first
     @last
     # base de connaissances
-    rulesfile = 'docs/rules.xml'
+    # rulesfile = './docs/rules.xml'
     # dictionnaire, reparti sur 4 fichiers (diviser pour regner!)
-    @datafile = ['docs/2-a.txt', 'docs/b-m.txt', 'docs/n-z.txt', 'docs/tilde.txt']
+    @path = Rails.root.join('app', 'controllers', 'api', 'phon', 'docs').to_s
+    @datafile = [@path + '/2-a.txt', @path + '/b-m.txt', @path + '/n-z.txt', @path + '/tilde.txt']
     @data = []            # tableau de stockage du dictionnaire
     phonetize
+
     loaddatafile
-    send if search
+    #send if search
   end
 
   def phonetize
     # Lecture du fichier XML encodé en ISO-8859-1
-    xml = Nokogiri::XML(File.open('docs/rules.xml'))
+    xml_path = @path + '/rules.xml'
+    xml = Nokogiri::XML(File.open(xml_path))
     left = ""
     rslt = ""
     right = @expr
@@ -139,9 +142,6 @@ class Rime
     for i in @first..@last
        results << @data[i][0].split("\t")[1].encode("utf-8")
     end
-    # puts results
-    final_result = results.to_json
-    # results est un Array
-    puts final_result
+    return results
   end
 end

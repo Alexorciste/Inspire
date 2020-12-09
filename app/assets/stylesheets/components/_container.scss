@@ -12,7 +12,51 @@
 
   min-width: 37%;
   height: 100vh;
-  
+
+}
+
+.bgnew {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("new-project-inspire.jpg");
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 1px 0px 10px 0px #81695d;
+
+  min-width: 37%;
+  height: 100vh;
+
+}
+
+.bgshow {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("piano-show-inspire.jpg");
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 1px 0px 10px 0px #81695d;
+
+  min-width: 37%;
+  height: 100vh;
+
+}
+.bgedit{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("violon-inspire-edit.jpg");
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 1px 0px 10px 0px #81695d;
+
+  min-width: 37%;
+  height: 100vh;
+
+}
+
+.bg-band-new{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("band-new-inspire.jpg");
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 1px 0px 10px 0px #81695d;
+
+  min-width: 37%;
+  height: 140vh;
+
+
 }
 
 .word {
@@ -31,12 +75,12 @@
       list-style-type: none;
       margin-left: 0;
     }
-  
+
 }
 
 .project-container {
   width: 100%;
-  box-shadow: 1px 0px 10px 0px #81695d;
+  //box-shadow: 1px 0px 10px 0px #81695d;
   // margin-left: 20px;
   height: 100vh;
   display: flex;
@@ -48,10 +92,11 @@
   display: flex;
   width: 800px;
   margin-top: 40px;
+  min-height:75vh;
 }
 
 // .wordCarousel {
-  
+
 // }
 
 #test {
@@ -120,6 +165,22 @@
   transition: 0.8s;
   opacity: 0.9;
 }
+
+
+.project-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+
+}
+
+.project-login{
+  .title {
+    color: black;
+  }
+}
+
 
 // .box{
 //     right:0px;

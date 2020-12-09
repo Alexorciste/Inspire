@@ -1,24 +1,24 @@
  <%# <div class="pr-content"> %>
-
+<%= content_for(:navbar_class, "project-home") %>
 <div class="big-container">
 
   <div class="bground">
-    
+
   </div>
 
-   
 
 
-    
+
+
     <div class = "project-container">
     <!-- <h1>Mes projets</h1> !-->
     <div class = "carousel">
-    
+
      <h1 class="wordCarousel">
       <div class="word">Mes Projets</div>
       <div class="one">
          <ul class="flip4">
-        
+
           <% @projects.each do |project| %>
           <li><%= project.title %></li>
            <% end %>
@@ -28,12 +28,12 @@
         </ul>
       </div>
     </h1>
-    </div> 
+    </div>
 
     <div class="project">
       <ul>
         <% @projects.each do |project| %>
-        <li><%= project.title %></li>
+        <li class= "project-two"><%= project.title %></li>
         <%= link_to 'Voir |', project ,class: "text" %>
         <% if policy(project).edit? %>
         <%= link_to 'Modifier |', edit_project_path(project), class: "text" %>
@@ -46,7 +46,7 @@
       <% end %>
     </div>
 
-     </div> 
-  
+     </div>
+
 </div>
 <%# </div> %>

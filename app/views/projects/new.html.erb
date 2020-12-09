@@ -1,3 +1,8 @@
+<%= content_for(:navbar_class, "project-home") %>
+ <div class="big-container">
+    <div class="bgnew">
+</div>
+
 <div class="pr-content">
 
 <h1>Nouveau Projet</h1>
@@ -5,4 +10,5 @@
 <%= render 'form', project: @project %>
 
 <p><%= link_to 'Retour', projects_path, class: "btn btn-dark" %></p>
+</div>
 </div>

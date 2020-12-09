@@ -29,10 +29,12 @@
           
         
             <% @projects.each do |project| %>
-          <div class="card-category">
-            <ul>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80)">
+
+           
             <li><%= project.title %></li>
             
+            <div class="icons">
             <%= link_to project, class: "text" do %>
             <i class="far fa-eye"></i>
             <% end %>
@@ -46,12 +48,15 @@
             <%= link_to project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text" do %>
             <i class="far fa-trash-alt"></i>
             <% end %>
+
+             </div>
             </div>
-            
+
             <% end %>
+           
             <% end %>
 
-          </ul>
+         
        
           <!--div close projet-->
           </div>

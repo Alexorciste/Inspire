@@ -18,9 +18,13 @@
 .project {
   // border: 1px solid black;
   // border-radius: 5px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(3, 150px);
+  // flex-direction: column;
   align-items: center;
 
   li {

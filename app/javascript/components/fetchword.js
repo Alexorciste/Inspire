@@ -7,7 +7,7 @@ const rimeWords = (data, clickWord) => {
   // This is the HTML from our response as a text string
   const divBox = document.querySelector('#results');
   const keyWord = clickWord.innerText;
- 
+
 	divBox.innerHTML = ' ';
 	data.forEach((result, index) => {
 		divBox.insertAdjacentHTML(
@@ -15,14 +15,18 @@ const rimeWords = (data, clickWord) => {
 			`<span id="span${index}">${result} </span><br />`
 		);
   });
-  
-  // divBox.querySelectorAll('span').forEach(span => {
-	// 	span.addEventListener('click', event => {
-  //     const copyWord = event.currentTarget;
-  //     copyWord.select();
-  //     document.execCommand('copy');
-  //   });
-  // })
+
+   divBox.querySelectorAll('span').forEach(span => {
+	 	span.addEventListener('click', event => {
+      let copyWord = event.currentTarget;
+      let textArea = document.createElement("textArea")
+      textArea.value = copyWord.textContent
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand('copy')
+      textArea.remove()
+     });
+   })
 
   // return data;
 };
@@ -33,7 +37,7 @@ const swapWords = (data, clickWord) => {
   // This is the HTML from our response as a text string
   const divBox = document.querySelector('#results');
   const keyWord = clickWord.innerText;
- 
+
 	divBox.innerHTML = ' ';
 	data.forEach((result, index) => {
 		divBox.insertAdjacentHTML(
@@ -54,13 +58,13 @@ const swapWords = (data, clickWord) => {
 				if (keyWord === wordArray[i]) {
 					  wordArray[i] = newWord;
 				}
-				
-			}		
+
+			}
 			divText.innerText = test.innerText;
-      	
+
 		});
 	});
-	
+
 	return data;
 };
 
@@ -81,7 +85,7 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
       swapWords(data, clickWord) :
        test.dataset.action === "rimes" ?
       rimeWords(data, clickWord) : console.log("not a valid action");
-      
+
     })
 		.catch(function (err) {
 			console.warn('Something went wrong.', err);

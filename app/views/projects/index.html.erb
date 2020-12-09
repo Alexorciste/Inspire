@@ -22,7 +22,7 @@
   <%= link_to 'Voir |', project ,class: "text" %>
     <% if policy(project).edit? %>
       <%= link_to 'Modifier |', edit_project_path(project), class: "text" %>
-      <%= link_to 'Détruire |', project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text"%>
+      <%= link_to 'Détruire ', project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text"%>
     <% end %>
   <% end %>
 </ul>

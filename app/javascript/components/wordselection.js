@@ -25,6 +25,7 @@ const wordSelector = () => {
 			
             const action = contextMenu();
             console.log(action);
+            
 			// pannelright
 			rightPannelListener(test, wordArray, action);
 

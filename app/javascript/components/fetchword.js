@@ -3,6 +3,32 @@
 import { contextMenu } from './contextmenu'
 
 
+const rimeWords = (data, clickWord) => {
+  // This is the HTML from our response as a text string
+  const divBox = document.querySelector('#results');
+  const keyWord = clickWord.innerText;
+ 
+	divBox.innerHTML = ' ';
+	data.forEach((result, index) => {
+		divBox.insertAdjacentHTML(
+			'beforeend',
+			`<span id="span${index}">${result} </span><br />`
+		);
+  });
+  
+  // divBox.querySelectorAll('span').forEach(span => {
+	// 	span.addEventListener('click', event => {
+  //     const copyWord = event.currentTarget;
+  //     copyWord.select();
+  //     document.execCommand('copy');
+  //   });
+  // })
+
+  // return data;
+};
+
+
+
 const swapWords = (data, clickWord) => {
   // This is the HTML from our response as a text string
   const divBox = document.querySelector('#results');
@@ -25,44 +51,16 @@ const swapWords = (data, clickWord) => {
       const wordArray = divText.innerText.split(/[\s,;:']+/);
 			var regex = new RegExp(`${keyWord}`, 'g');
 			for (var i = 0; i < wordArray.length; i++) {
-				console.log(keyWord, newWord, wordArray[i]);
-
 				if (keyWord === wordArray[i]) {
-					wordArray[i] = newWord;
+					  wordArray[i] = newWord;
 				}
-				console.log('after', wordArray);
-				// wordArray[i] = wordArray[i].replace(regex, newWord);
-			}
-
-			console.log('after', wordArray);
-
-			// let fruits = [‘Apple’, ‘Banana’];
-			// var dep = new RegExp(`${fruits[0]}`,“i”)
-			// const arr = ‘arrivee’
-			// console.log(fruits,arr)
-			// for(var i=0; i < fruits.length; i++) {
-			//  fruits[i] = fruits[i].replace(dep, arr);
-			// }
-			// console.log(fruits,arr)
-
+				
+			}		
 			divText.innerText = test.innerText;
-      console.log('divText:', divText)
-      console.log('Test:', test)
-
-			//  const splitText = divText.innerText.split(/[\s,;:’]+/)
-      //  test.innerHTML = " ";
-			//  const array = [];
-			//  splitText.forEach((word, index) => {
-			//    array.push(`<span>${word}</span>`);
-			//   //  test.insertAdjacentHTML(
-			//   //   "beforeend",
-			//   //    `<span id="span${index}">${word} </span>`
-			//   //  );
-			//     // rightPannelListener(test, wordArray, "synonymes");
-			//    });
+      	
 		});
 	});
-	console.log(data);
+	
 	return data;
 };
 
@@ -70,7 +68,8 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
 	const keyWord = clickWord.innerText;
 	const divBox = document.querySelector('#results');
 
-	divBox.classList.add('active');
+  divBox.classList.add('active');
+  console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
 	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
@@ -79,9 +78,9 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
     })
     .then((data) => {
       test.dataset.action === "synonymes" ?
-      swapWords(data, clickWord) : 
-      test.dataset.action === "rimes" ?
-      console.log(rimes) : console.log("not a valid action");
+      swapWords(data, clickWord) :
+       test.dataset.action === "rimes" ?
+      rimeWords(data, clickWord) : console.log("not a valid action");
       
     })
 		.catch(function (err) {

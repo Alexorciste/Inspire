@@ -75,12 +75,12 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
   divBox.classList.add('active');
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-	test.dataset.action = "synonymes";
+	// test.dataset.action = "synonymes";
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
 	// if(test.dataset.action === "rimes") {
 	// 	keyWord = keyWord.slice(-letterNumber);
 	// }
-	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })

@@ -80,7 +80,7 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
 	// if(test.dataset.action === "rimes") {
 	// 	keyWord = keyWord.slice(-letterNumber);
 	// }
-	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })

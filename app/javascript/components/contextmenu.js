@@ -6,6 +6,7 @@ export const contextMenu = () => {
 	const item = menu.querySelectorAll('.menu-item');
   let selection = "synonymes" ;
 
+  if (spanArray) {
 	spanArray.forEach(span => {
 		span.addEventListener('contextmenu', e => {
 			e.preventDefault();
@@ -20,7 +21,7 @@ export const contextMenu = () => {
       selection = li.innerText;
       test.dataset.action = selection;
       // console.log(selection);
-      console.log(test.dataset.action)
+      // console.log(test.dataset.action)
 			
     });
     
@@ -29,8 +30,8 @@ export const contextMenu = () => {
 	document.addEventListener('click', event => {
 		menu.classList.remove('show');
   });
-  return selection;
+  return test.dataset.action;
 };
-
+}
 
 

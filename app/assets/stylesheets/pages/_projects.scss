@@ -6,16 +6,31 @@
   margin-bottom: 100px;
   min-height: 46vh;
 }
-.btn-dark{
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  // font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark {
   box-shadow: -3px 2px 26px 0px grey;
 }
 
 .btn-dark:hover {
-    color: #fff;
-    background-color: #584238;
-    border-color: #584238;
-  }
-
+  color: #fff;
+  background-color: #584238;
+  border-color: #584238;
+}
 
 .pr-content ul {
   list-style-type: none;
@@ -32,114 +47,162 @@
   margin-top: 190px;
 }
 
-
 .pr-content a {
   font-size: 19px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .pr-content p {
   text-align: center;
 }
 
-a{
+a {
   color: #151f21;
   //font-size: 18px;
 }
 
-a:hover{
-
+a:hover {
   color: #584238;
   text-decoration: none;
 }
 
 .wordCarousel {
-    font-size: 36px;
-    font-weight: 100;
-    color: #939393;
+  font-size: 36px;
+  font-weight: 100;
+  color: #939393;
 
-    .one {
-        overflow: hidden;
-        position: relative;
-        float: right;
-        height: 65px;
-        padding-top: 10px;
-        margin-top: -10px;
-        li {
-            font-family: sans-serif;
-            color: #584238;
-            font-weight: 700;
-            padding: 0 10px;
-            height: 45px;
-            margin-bottom: 45px;
-            display: block;
-        }
+  .one {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 65px;
+    padding-top: 10px;
+    margin-top: -10px;
+    li {
+      font-family: sans-serif;
+      color: #584238;
+      font-weight: 700;
+      padding: 0 10px;
+      height: 45px;
+      margin-bottom: 45px;
+      display: block;
     }
+  }
 }
 
-.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip2 {
+  animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+.flip3 {
+  animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+.flip4 {
+  animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
 
 @keyframes flip2 {
-    0% { margin-top: -180px; }
-    5% { margin-top: -90px;  }
-    50% { margin-top: -90px; }
-    55% { margin-top: 0px; }
-    99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 @keyframes flip3 {
-    0% { margin-top: -270px; }
-    5% { margin-top: -180px; }
-    33% { margin-top: -180px; }
-    38% { margin-top: -90px; }
-    66% { margin-top: -90px; }
-    71% { margin-top: 0px; }
-    99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 @keyframes flip4 {
-    0% { margin-top: -360px; }
-    5% { margin-top: -270px; }
-    25% { margin-top: -270px; }
-    30% { margin-top: -180px; }
-    50% { margin-top: -180px; }
-    55% { margin-top: -90px; }
-    75% { margin-top: -90px; }
-    80% { margin-top: 0px; }
-    99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -270px;
+  }
+  30% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  55% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: -90px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 // Layout //////////////////////////////////////////
 .wordCarousel {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
 }
 
 .wordCarousel {
-    font-family: 'Major Mono Display', monospace;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  font-family: "Major Mono Display", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.flip4{
+.flip4 {
   text-align: center;
 }
 
 .word {
-
-color: black;
+  color: black;
 }
-

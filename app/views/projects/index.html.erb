@@ -1,52 +1,68 @@
- <%# <div class="pr-content"> %>
 
 <div class="big-container">
 
   <div class="bground">
-    
+  <!--div close bground-->
   </div>
-
-   
-
-
     
     <div class = "project-container">
     <!-- <h1>Mes projets</h1> !-->
-    <div class = "carousel">
-    
-     <h1 class="wordCarousel">
-      <div class="word">Mes Projets</div>
-      <div class="one">
-         <ul class="flip4">
+        <div class = "carousel">
         
-          <% @projects.each do |project| %>
-          <li><%= project.title %></li>
-           <% end %>
-          <%# <li>is-it ?</li>
-          <li>What</li>
-          <li>God !</li> %>
-        </ul>
-      </div>
-    </h1>
-    </div> 
+        <h1 class="wordCarousel">
+          <div class="word">Mes Projets</div>
+          <div class="one">
+            <ul class="flip4">
+            
+              <% @projects.each do |project| %>
+              <li><%= project.title %></li>
+              <% end %>
+              <%# <li>is-it ?</li>
+              <li>What</li>
+              <li>God !</li> %>
+            </ul>
+          </div>
+        </h1>
+        </div> 
 
-    <div class="project">
-      <ul>
-        <% @projects.each do |project| %>
-        <li><%= project.title %></li>
-        <%= link_to 'Voir |', project ,class: "text" %>
-        <% if policy(project).edit? %>
-        <%= link_to 'Modifier |', edit_project_path(project), class: "text" %>
-        <%= link_to 'Détruire |', project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text"%>
-        <% end %>
-        <% end %>
-      </ul>
-      <% if policy(Project).create? %>
-      <p><%= link_to 'Créer un nouveau projet', new_project_path, class: "btn btn-dark" %></p>
-      <% end %>
-    </div>
+        <div class="project">
+          
+        
+            <% @projects.each do |project| %>
+          <div class="card-category">
+            <ul>
+            <li><%= project.title %></li>
+            
+            <%= link_to project, class: "text" do %>
+            <i class="far fa-eye"></i>
+            <% end %>
+            
+            <% if policy(project).edit? %>
+            
+            <%= link_to edit_project_path(project), class: "text" do %>
+            <i class="far fa-edit"></i>
+            <% end %>
+            
+            <%= link_to project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text" do %>
+            <i class="far fa-trash-alt"></i>
+            <% end %>
+            </div>
+            
+            <% end %>
+            <% end %>
 
+          </ul>
+       
+          <!--div close projet-->
+          </div>
+
+          <% if policy(Project).create? %>
+          <p><%= link_to 'Créer un nouveau projet', new_project_path, class: "btn btn-dark" %></p>
+          <% end %>
+      
+   
+    <!--div close project container-->
      </div> 
-  
+
+<!--close-big-container-->
 </div>
-<%# </div> %>

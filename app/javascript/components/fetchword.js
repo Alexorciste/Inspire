@@ -87,7 +87,7 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
-	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })

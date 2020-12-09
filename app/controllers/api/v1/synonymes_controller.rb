@@ -1,7 +1,8 @@
 require "open-uri"
 require 'nokogiri'
-require_relative '../phon/rime'
-require 'pry-byebug'
+require 'uri'
+require 'json'
+
 
 class Api::V1::SynonymesController < Api::V1::BaseController
 
@@ -18,10 +19,10 @@ class Api::V1::SynonymesController < Api::V1::BaseController
     render json: synonymes.to_json
   end
 
-  def find_rime
-    rime = Rime.new(params[:keyword])
-    results = []
-    results = rime.send if rime.search
-    render json: results.to_json
-  end
 end
+
+
+
+
+
+

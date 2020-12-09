@@ -68,19 +68,19 @@ const swapWords = (data, clickWord) => {
 	return data;
 };
 
-export const synonymScrapping = (test, clickWord, wordArray, action, letterNumber) => {
+export const synonymScrapping = (test, clickWord, wordArray, action) => {
 	const keyWord = clickWord.innerText;
 	const divBox = document.querySelector('#results');
 
   divBox.classList.add('active');
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-
+	test.dataset.action = "synonymes";
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
-	if(test.dataset.action === "rimes") {
-		keyWord = keyWord.slice(-letterNumber);
-	}
-	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	// if(test.dataset.action === "rimes") {
+	// 	keyWord = keyWord.slice(-letterNumber);
+	// }
+	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })
@@ -101,9 +101,11 @@ export const synonymScrapping = (test, clickWord, wordArray, action, letterNumbe
 const cutWord = () => {
 
 	const lastLetter = document.querySelector("#numbers")
-	return parseInt(lastLetter.value);
+	const letterNumber = parseInt(lastLetter.value, 10);
+	const tryWord = "soleil"
+	console.log(tryWord.slice(-letterNumber));
 
- }
+  }
 
 
 
@@ -118,10 +120,10 @@ export const rightPannelListener = (test, wordArray, action) => {
 
 			const clickWord = event.currentTarget;
 			
-			letterNumber = contextMenu();
+			// letterNumber = contextMenu();
 
 			// fetch scrapping api
-			synonymScrapping(test,clickWord, wordArray, action, letterNumber);
+			synonymScrapping(test,clickWord, wordArray, action);
 		});
 	});
 };

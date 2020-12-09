@@ -75,7 +75,7 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
   divBox.classList.add('active');
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-
+	test.dataset.action = "synonymes";
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
 	// if(test.dataset.action === "rimes") {
 	// 	keyWord = keyWord.slice(-letterNumber);
@@ -98,18 +98,20 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
 }
 
 
-// const cutWord = () => {
+const cutWord = () => {
 
-// 	const lastLetter = document.querySelector("#numbers")
-// 	return parseInt(lastLetter.value);
+	const lastLetter = document.querySelector("#numbers")
+	const letterNumber = parseInt(lastLetter.value, 10);
+	const tryWord = "soleil"
+	console.log(tryWord.slice(-letterNumber));
 
-//  }
+  }
 
 
 
 
 export const rightPannelListener = (test, wordArray, action) => {
-	// cutWord();
+	cutWord();
 	test.querySelectorAll('span').forEach(span => {
 		span.addEventListener('click', event => {
 			menu.style.top = `${event.clientY}px`;

@@ -1,4 +1,8 @@
-<div class="pr-content">
+<%= content_for(:navbar_class, "project-home") %>
+ <div class="big-container">
+    <div class="bgshow">
+</div>
+<div class="pr-content">!
 
 <h1><%= @project.title %></h1>
 
@@ -19,14 +23,12 @@
 <% else %>
 <p><%= link_to 'Nouveau groupe', new_project_band_path(@project) %></p>
 <% end %>
-  
+
 
 <p><%= link_to 'Nouveau texte', new_project_text_path(@project) %></p>
-</div>
 <p><%= link_to 'Retour', projects_path %></p>
-
-
-
+</div>
+</div>
 
 
 

@@ -1,3 +1,11 @@
+<%= content_for(:navbar_class, "project-home") %>
+ <div class="big-container">
+    <div class="bg-band-new">
+</div>
+
+
+
+
 <div class="pr-content">
 
 
@@ -6,9 +14,10 @@
 
 
 <%= render 'form', locals: { band: @band, emails: @emails } %>
-</div>
 
 <%= link_to 'Retour', project_path(@project) %>
+</div>
+</div>
 
 
 

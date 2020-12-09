@@ -3,6 +3,16 @@ require 'pry-byebug'
 class BandsController < ApplicationController
   before_action :set_band, only: [:show, :edit, :update, :destroy]
 
+  after_action :send_invitation_email, only: [:create]
+
+  def send_invitation_email
+    @owner = current_user
+    @project = Project.find(params[:project_id])
+    @users.each do |user|
+      UserMailer.invitation(user, @owner, @project).deliver_now
+    end
+  end
+
   def index
     @bands = Band.all
   end
@@ -60,7 +70,7 @@ class BandsController < ApplicationController
   private
 
   def set_band
-    raise
+    #raise
     @band = Band.find(params[:id])
     authorize @band
   end

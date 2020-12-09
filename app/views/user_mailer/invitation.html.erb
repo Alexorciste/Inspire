@@ -1,0 +1,10 @@
+<h1> Invitation pour <%= @user.first_name %></h1>
+
+<p>
+  <%= @greeting %><% @user.nickname %>
+  Ce ceci est une inviation de <%= @owner.nickname %> à partager
+  l'écriture d'un texte sur son projet <%= @project.title %>
+
+</p>
+
+<%= link_to "Venez lui rendre visite", project_url(@project) %>

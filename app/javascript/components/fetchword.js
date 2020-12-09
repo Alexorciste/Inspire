@@ -71,16 +71,24 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
 	const divBox = document.querySelector('#results');
 
 	divBox.classList.add('active');
-	// fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
-	fetch(`http://${window.location.host}/api/v1/${action}?keyword=${keyWord}`)
+  // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+  if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
+	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
-		})
-		.then(data => swapWords(data, clickWord))
+    })
+    .then((data) => {
+      test.dataset.action === "synonymes" ?
+      swapWords(data, clickWord) : 
+      test.dataset.action === "rimes" ?
+      console.log(rimes) : console.log("not a valid action");
+      
+    })
 		.catch(function (err) {
 			console.warn('Something went wrong.', err);
 		});
-};
+  };
+}
 
 export const rightPannelListener = (test, wordArray, action) => {
 	test.querySelectorAll('span').forEach(span => {

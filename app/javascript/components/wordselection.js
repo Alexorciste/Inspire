@@ -22,8 +22,9 @@ const wordSelector = () => {
 				);
 			});
 
-			contextMenu();
-            const action = "synonymes"
+			
+            const action = contextMenu();
+            console.log(action);
 			// pannelright
 			rightPannelListener(test, wordArray, action);
 

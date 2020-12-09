@@ -2,18 +2,7 @@
 
 import { contextMenu } from './contextmenu'
 
-// const cutWord = () => {
-// 	const lastLetter = document.querySelector("#numbers").value
-// 	console.log(lastLetter)
-
-// }
-
-
-
-
-
-
-
+ 
 const rimeWords = (data, clickWord) => {
   // This is the HTML from our response as a text string
   const divBox = document.querySelector('#results');
@@ -79,15 +68,19 @@ const swapWords = (data, clickWord) => {
 	return data;
 };
 
-export const synonymScrapping = (test, clickWord, wordArray, action) => {
+export const synonymScrapping = (test, clickWord, wordArray, action, letterNumber) => {
 	const keyWord = clickWord.innerText;
 	const divBox = document.querySelector('#results');
 
   divBox.classList.add('active');
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
+
   if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
-	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	if(test.dataset.action === "rimes") {
+		keyWord = keyWord.slice(-letterNumber);
+	}
+	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })
@@ -104,7 +97,19 @@ export const synonymScrapping = (test, clickWord, wordArray, action) => {
   };
 }
 
+
+const cutWord = () => {
+
+	const lastLetter = document.querySelector("#numbers")
+	return parseInt(lastLetter.value);
+
+ }
+
+
+
+
 export const rightPannelListener = (test, wordArray, action) => {
+	cutWord();
 	test.querySelectorAll('span').forEach(span => {
 		span.addEventListener('click', event => {
 			menu.style.top = `${event.clientY}px`;
@@ -112,9 +117,11 @@ export const rightPannelListener = (test, wordArray, action) => {
 			menu.classList.add('show');
 
 			const clickWord = event.currentTarget;
-			contextMenu();
+			
+			letterNumber = contextMenu();
+
 			// fetch scrapping api
-			synonymScrapping(test,clickWord, wordArray, action);
+			synonymScrapping(test,clickWord, wordArray, action, letterNumber);
 		});
 	});
 };

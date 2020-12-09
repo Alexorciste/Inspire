@@ -1,6 +1,5 @@
 require 'uri'
 require 'nokogiri'
-require 'pry-byebug'
 require 'json'
 
 class Rime

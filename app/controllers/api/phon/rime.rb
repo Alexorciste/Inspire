@@ -142,6 +142,8 @@ class Rime
     for i in @first..@last
        results << @data[i][0].split("\t")[1].encode("utf-8")
     end
+    #return "hello"
+    results = results.sort_by(&:length).take(11)
     return results
   end
 end

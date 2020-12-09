@@ -6,10 +6,10 @@
 <ul>
 <% @project.texts.each do |text| %>
       <li><%= text.title %></li>
-      <%= link_to 'Show', sekret_text_path(text) %>
-      <%= link_to 'Edit', edit_sekret_text_path(text) %>
+      <%= link_to 'Voir', sekret_text_path(text) %>
+      <%= link_to 'Modifier', edit_sekret_text_path(text) %>
       <!-- %= link_to 'Edit', edit_project_text_path(@project) %> -->
-      <%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Détruire', text, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' } %>
 <% end %>
 </ul>
 </div>

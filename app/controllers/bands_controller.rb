@@ -42,7 +42,10 @@ class BandsController < ApplicationController
     end
 
     if ok
+
+
       redirect_to project_path(@project), notice: 'Votre groupe a bien été créé.'
+
     else
       render :new
     end

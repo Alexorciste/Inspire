@@ -1,4 +1,3 @@
-
 <%= simple_form_for [@project, @band] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -9,6 +8,6 @@
     <%= f.input :write_acces, as: :boolean, label: 'Autoriser la modification du texte ?' %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit, "Créer le groupe", class: "btn btn-dark" %>
+    <%= f.button :submit, "Sauvegarder", class: "btn btn-dark" %>
   </div>
 <% end %>

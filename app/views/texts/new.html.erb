@@ -3,7 +3,17 @@
 
 
 <%= render 'form', text: @text %>
+
+<div class = "action-word">
+
+  <form action="/action_page.php">
+    <label for="fname">Localisation de la rime</label>
+    <input type="text" id ="numbers" value="nombre de lettres"><br><br>
+  </form>
+</div>
+
 <div id="test" data-action="synonymes"></div>
+
 <div id="results"></div>
 </div>
 

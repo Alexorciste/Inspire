@@ -2,6 +2,17 @@
 
 import { contextMenu } from './contextmenu'
 
+// const cutWord = () => {
+// 	const lastLetter = document.querySelector("#numbers").value
+// 	console.log(lastLetter)
+
+// }
+
+
+
+
+
+
 
 const rimeWords = (data, clickWord) => {
   // This is the HTML from our response as a text string

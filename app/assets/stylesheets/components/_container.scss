@@ -1,6 +1,7 @@
 .big-container {
   display: flex;
   // justify-content: flex-start;
+  height: 100vh;
 }
 
 .bground {
@@ -10,53 +11,49 @@
   background-size: cover;
   min-width: 37%;
   height: 100vh;
-
-
 }
 
 .bgnew {
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("new-project-inspire.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    image-url("new-project-inspire.jpg");
   background-repeat: none;
   background-size: cover;
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
   height: 100vh;
-
 }
 
 .bgshow {
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("piano-show-inspire.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    image-url("piano-show-inspire.jpg");
   background-repeat: none;
   background-size: cover;
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
   height: 100vh;
-
 }
-.bgedit{
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("violon-inspire-edit.jpg");
+.bgedit {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    image-url("violon-inspire-edit.jpg");
   background-repeat: none;
   background-size: cover;
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
   height: 100vh;
-
 }
 
-.bg-band-new{
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("band-new-inspire.jpg");
+.bg-band-new {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    image-url("band-new-inspire.jpg");
   background-repeat: none;
   background-size: cover;
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
   height: 140vh;
-
-
-
 }
 
 .word {
@@ -75,13 +72,10 @@
   // flex-direction: column;
   align-items: center;
 
-
-    li {
-      list-style-type: none;
-      margin-left: 0;
-    }
-
-
+  li {
+    list-style-type: none;
+    margin-left: 0;
+  }
 }
 
 .project-container {
@@ -96,11 +90,16 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.project-container h1 {
+  font-family: "Major Mono Display", monospace;
+}
+
 .container {
   display: flex;
   width: 800px;
   margin-top: 40px;
-  min-height:75vh;
+  min-height: 75vh;
 }
 
 // .wordCarousel {
@@ -109,12 +108,10 @@
 .action-word {
   right: 0px;
   top: 100px;
-position: absolute;
+  position: absolute;
 
-z-index: 1;
+  z-index: 1;
 }
-
-
 
 #test {
   right: 0px;
@@ -184,21 +181,18 @@ z-index: 1;
   opacity: 0.9;
 }
 
-
 .project-home {
   position: absolute;
   width: 100%;
   background: transparent;
   box-shadow: none;
-
 }
 
-.project-login{
+.project-login {
   .title {
     color: black;
   }
 }
-
 
 // .box{
 //     right:0px;

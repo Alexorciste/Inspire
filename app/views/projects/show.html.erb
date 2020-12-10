@@ -1,4 +1,5 @@
 <%= content_for(:navbar_class, "project-home") %>
+
  <div class="big-container">
     <div class="bgshow">
 </div>
@@ -20,6 +21,48 @@
 
 <% if @project.bands.length > 0 %>
 <p><%= link_to 'Modifier groupe', search_project_bands_path(@project), class: "text-group" %></p>
+=======
+
+<div class="big-container">
+      
+      <div class="bgshow"></div>
+
+            
+                  <div class = "project-container">
+               
+                  <h1><%= @project.title %></h1>
+
+                        <div class="project">
+                        <% @project.texts.each do |text| %>
+                              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80)">
+
+                              <li>
+                              <%= link_to sekret_text_path(text), class: "card-title" do %>
+                              <%= text.title %></li>
+                              <% end %>
+                                    
+                                    <div class="icons">
+                                    
+                                    <%= link_to sekret_text_path(text) do %>
+                                    <i class="far fa-eye"></i>
+                                    <% end %>
+
+                                    <%= link_to edit_sekret_text_path(text) do %>
+                                    <i class="far fa-edit"></i>
+                                    <% end %>
+                                    
+                                    <%= link_to text, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text" do %>
+                                    <i class="far fa-trash-alt"></i>
+                                    <% end %>
+                                    
+                                    </div>
+                              </div>
+                        <% end %>
+
+                  </div>
+                  <% if @project.bands.length > 0 %>
+<p><%= link_to 'Modifier groupe', search_project_bands_path(@project) %></p>
+
 <% else %>
 <p><%= link_to 'Nouveau groupe', new_project_band_path(@project), class: "text-group" %></p>
 <% end %>
@@ -27,6 +70,10 @@
 
 <p><%= link_to 'Nouveau texte', new_project_text_path(@project), class: "text-group" %></p>
 <p><%= link_to 'Retour', projects_path %></p>
+</div>
+
+
+</div>
 </div>
 </div>
 

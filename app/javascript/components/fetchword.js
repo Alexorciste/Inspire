@@ -81,7 +81,7 @@ export const synonymScrapping = (test, clickWord, wordArray, action,letterNumber
 	 	keyWord = keyWord.slice(-letterNumber);
 	 console.log(letterNumber)} 
 
-	fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+	fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 		.then(response => {
 			return response.json();
     })

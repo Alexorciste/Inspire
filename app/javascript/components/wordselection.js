@@ -1,5 +1,8 @@
 import { rightPannelListener } from './fetchword';
 import { contextMenu } from './contextmenu';
+import { cutWord } from './fetchword';
+
+
 
 const wordSelector = () => {
 
@@ -25,9 +28,9 @@ const wordSelector = () => {
 			
             const action = contextMenu();
             console.log(action);
-            
+            const letterNumber = cutWord();
 			// pannelright
-			rightPannelListener(test, wordArray, action);
+			rightPannelListener(test, wordArray, action, letterNumber);
 
 			// const finalString = wordArray.join(" ")
 			// const urlcourante = document.location.href;

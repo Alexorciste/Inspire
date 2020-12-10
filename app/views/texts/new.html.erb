@@ -3,26 +3,22 @@
 
 <%= render 'form', text: @text %>
 
-  <div class = "action-word">
 
-    <form action="/action_page.php">
-      <label for="fname">Localisation de la rime</label>
-      <input type="text" id ="numbers" value="nombre de lettres"><br><br>
-    </form>
+<div class = "action-word">
+    <label for="fname">Sonorité</label>
+    <input type="text" id ="numbers" value=""><br><br>
   </div>
 
-      <div id="test" data-action="synonymes"></div> 
+<div id="test" class="synonyme" data-action="synonymes"></div>
 
-      <div id="results"></div>
 
 </div>
 
 <ul id="menu">
       <li class="menu-item">synonymes</li>
-      <li class="menu-item">Rimes</li>
-      <li class="menu-item">Numéros du Loto</li>
-      <li class="menu-item">Aller sur la lune</li>
-    </ul>
+      <li class="menu-item">rimes</li>
+</ul>
+
 
 <div id="out-click"></div>
 

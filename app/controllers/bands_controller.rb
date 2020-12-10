@@ -7,7 +7,7 @@ class BandsController < ApplicationController
     @owner = current_user
     @project = Project.find(params[:project_id])
     @users.each do |user|
-      UserMailer.invitation(user, @owner, @project).deliver_now
+      UserMailer.invitation(user, @owner, @project).deliver_later
     end
   end
 

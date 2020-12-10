@@ -162,7 +162,7 @@ class Api::V1::SynonymesController < Api::V1::BaseController
          results << @data[i][0].split("\t")[1].encode("utf-8")
       end
       #return "hello"
-      results = results.sort_by(&:length).take(11)
+      results = results.sort_by(&:length).take(30)
       return results
     end
   end

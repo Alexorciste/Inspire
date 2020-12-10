@@ -48,13 +48,9 @@
 }
 
 .icons {
-
-
-
   position: absolute;
   bottom: 3px;
   right: 10px;
-
 }
 
 .card-category:hover {
@@ -257,16 +253,14 @@ a:hover {
   }
 }
 
-
-.btn-secondary{
+.btn-secondary {
   font-size: 17px;
-padding: 4px 25px;
-box-shadow: -3px 2px 26px 0px grey;
-margin-right: 468px;
-margin-top: -68px;
-background-color: #584238;
+  padding: 4px 25px;
+  box-shadow: -3px 2px 26px 0px grey;
+  margin-right: 468px;
+  margin-top: -68px;
+  background-color: #584238;
   border-color: #584238;
-
 }
 
 .btn-secondary:hover {
@@ -274,14 +268,7 @@ background-color: #584238;
   border-color: #151f21;
 }
 
+// .form-actions .btn-dark{
+//   margin-left: 415px;
 
-.form-actions .btn-dark{
-  margin-left: 415px;
-
-
-}
-
-
-
-
-
+// }

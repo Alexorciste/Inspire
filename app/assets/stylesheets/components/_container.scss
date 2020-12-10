@@ -53,7 +53,18 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 140vh;
+  height: 100vh;
+}
+.bgtext {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    image-url("text-write-inspire.jpg");
+  background-repeat: none;
+  background-size: cover;
+  box-shadow: 1px 0px 10px 0px #81695d;
+
+  min-width: 37%;
+  height: 100vh;
+
 }
 
 .word {
@@ -217,3 +228,56 @@
 // 	width: 50%;
 // 	transition: 0.8s;
 // }
+
+.btn-text {
+  box-shadow: -3px 2px 26px 0px grey;
+  background: #343a40;
+    padding: 11px 32px;
+    color: white;
+}
+
+.btn-text:hover {
+background: #584238;
+    padding: 11px 32px;
+    color: white;
+}
+
+
+.btn-new {
+  box-shadow: -3px 2px 26px 0px grey;
+  background: #584238;
+    padding: 9px 32px;
+    color: white;
+}
+
+.btn-new:hover {
+background: #151f21;
+    padding: 9px 32px;
+    color: white;
+
+}
+
+.new-btn{
+  margin:-31px;
+  margin-left:2px;
+}
+
+.btn-modif{
+  box-shadow: -3px 2px 26px 0px grey;
+  background: #584238;
+    padding: 9px 32px;
+    color: white;
+
+}
+
+.btn-modif:hover {
+  background: #151f21;
+    padding: 9px 32px;
+    color: white;
+}
+
+.modif-btn {
+  margin: -34px;
+    margin-left: -436px;
+}
+

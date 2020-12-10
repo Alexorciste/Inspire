@@ -14,8 +14,10 @@
 
 
 <%= render 'form', locals: { band: @band, emails: @emails } %>
+<div class="new-btn">
 
-<%= link_to 'Retour', project_path(@project) %>
+<%= link_to 'Retour', project_path(@project) , class: "btn-new" %>
+</div>
 </div>
 </div>
 

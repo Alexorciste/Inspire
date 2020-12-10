@@ -9,6 +9,7 @@
 
                   <h1><%= @project.title %></h1>
 
+
                         <div class="project">
                         <% @project.texts.each do |text| %>
                               <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80)">
@@ -37,11 +38,12 @@
                         <% end %>
 
                   </div>
-                  <% if @project.bands.length > 0 %>
-<p><%= link_to 'Modifier groupe', search_project_bands_path(@project) %></p>
 
-<% else %>
-<p><%= link_to 'Nouveau groupe', new_project_band_path(@project), class: "text-group" %></p>
+<% if @project.bands.length > 0 %>
+      <p><%= link_to 'Modifier groupe', search_project_bands_path(@project) %></p>
+
+      <% else %>
+      <p><%= link_to 'Nouveau groupe', new_project_band_path(@project), class: "text-group" %></p>
 <% end %>
 
 
@@ -51,6 +53,7 @@
 
 
 </div>
+
 
 
 

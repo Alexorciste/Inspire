@@ -7,15 +7,19 @@
 <%= render 'form', text: @text %>
 </div>
 
-<div id="test" data-action="synonymes">
+<div class = "action-word">
+    <label for="fname">Sonorité</label>
+    <input type="text" id ="numbers" value=""><br><br>
+</div>
+
+<div id="test" class="synonyme" data-action="synonymes">
 </div>
 <div id="results"></div>
 <ul id="menu">
       <li class="menu-item">synonymes</li>
       <li class="menu-item">rimes</li>
-      <li class="menu-item">Numéros du Loto</li>
-      <li class="menu-item">Aller sur la lune</li>
-    </ul>
+</ul>
+
 <div id="out-click"></div>
 
 <%= link_to 'Retour', project_path(@project) %>

@@ -19,8 +19,9 @@ export const contextMenu = () => {
 	item.forEach(li => {
 		li.addEventListener('click', event => {
       selection = li.innerText;
-      test.dataset.action = selection;
-      // console.log(selection);
+	  test.dataset.action = selection;
+	  test.classList.toggle("rime", "synonyme");
+	        // console.log(selection);
       // console.log(test.dataset.action)
 			
     });

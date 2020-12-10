@@ -12,13 +12,14 @@
   background-position: center;
   // background-color: #343a40;
   // opacity: 0.9;
-  height: 90px;
+  height: 111px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
   font-size: 18px;
   // font-weight: bold;
   // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -27,16 +28,28 @@
   padding: 10px;
   margin: 10px;
   transition: transform 0.2s; /* Animation */
+  position: relative;
 }
 
 .card-category i {
-  font-size: 12px;
+  font-size: 15px;
+  margin-left: 10px;
   color: #eeeeeead;
+}
+
+.card-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  color: honeydew;
+}
+
+.card-title:hover {
+  color: whitesmoke;
 }
 
 .icons {
   position: absolute;
-  bottom: 2px;
+  bottom: 3px;
   right: 10px;
 }
 
@@ -66,7 +79,7 @@
   font-size: 30px;
   color: #151f21;
   font-family: "Major Mono Display", monospace;
-  margin-top: 190px;
+  margin-top: 20px;
 }
 
 .pr-content a {
@@ -229,18 +242,13 @@ a:hover {
   color: black;
 }
 
-
 .project-home {
   position: absolute;
   width: 100%;
   background: transparent;
   box-shadow: none;
 
-  h1{
-    color:white;
+  h1 {
+    color: white;
   }
 }
-
-
-
-

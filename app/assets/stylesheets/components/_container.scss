@@ -4,7 +4,8 @@
 }
 
 .bground {
-  background-image: url("https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  //background-image: url("https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("inspire-project.jpg");
   background-repeat: none;
   background-size: cover;
   min-width: 37%;
@@ -129,7 +130,7 @@ z-index: 1;
   box-shadow: 1px 0px 10px 0px #81695d;
   position: absolute;
   padding: 10px;
- 
+
 
   span {
     font-size: 16px;

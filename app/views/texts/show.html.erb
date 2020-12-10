@@ -1,9 +1,18 @@
+<%= content_for(:navbar_class, "project-home") %>
+<div class="big-container">
+
+      <div class="bgtext"></div>
+
+
+                  <div class = "project-container">
+
 <div class="pr-content">
 
 <h1><%= @text.title %></h1>
 
 <p><%= @text.content %></p>
 
-<p><%= link_to 'Retour', project_path(@text.project) %></p>
-
+<p><%= link_to 'Retour', project_path(@text.project), class: "btn-text" %></p>
+</div>
+</div>
 </div>

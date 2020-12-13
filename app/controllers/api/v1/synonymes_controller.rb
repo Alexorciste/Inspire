@@ -13,7 +13,7 @@ class Api::V1::SynonymesController < Api::V1::BaseController
     response = open(url).read
     html_doc = Nokogiri::HTML(response)
     synonymes = []
-    html_doc.search(".field-item").first(10).each do |element|
+    html_doc.search(".field-item").each do |element|
       synonyme = element.text
       synonymes << synonyme
     end
@@ -162,7 +162,7 @@ class Api::V1::SynonymesController < Api::V1::BaseController
          results << @data[i][0].split("\t")[1].encode("utf-8")
       end
       #return "hello"
-      results = results.sort_by(&:length).take(30)
+      results = results.sort_by(&:length)
       return results
     end
   end

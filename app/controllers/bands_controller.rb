@@ -6,9 +6,9 @@ class BandsController < ApplicationController
   def send_invitation_email
     @owner = current_user
     @project = Project.find(params[:project_id])
-    @users.each do |user|
-      UserMailer.invitation(user, @owner, @project).deliver_later
-    end
+    # @users.each do |user|
+    #   UserMailer.invitation(user, @owner, @project).deliver_later
+    # end
   end
 
   def index
@@ -30,10 +30,12 @@ class BandsController < ApplicationController
     @project = Project.find(params[:project_id])
     @users = User.where(email: params[:band][:user])
     @bande_name = params[:band][:name]
+    @write_acces = params[:band][:write_acces]
 
     @users.each do |user|
 
-      band = Band.new(name: @bande_name, project: @project, user: user, write_acces: false)
+      band = Band.new(name: @bande_name, project: @project, user: user, write_acces: @write_acces)
+      
       authorize band
       band.save
       ok = true

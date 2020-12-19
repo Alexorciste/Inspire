@@ -6,7 +6,11 @@
 <%  @band_users.each do |user| %>
 <li><%= user[0][:nickname] %> - <%= user[0][:first_name] %> <%= user[0][:last_name] %>
 
- <%= user[1][:write_acces] %></li>
+ <% if user[1][:write_acces] == true %>
+ : "Droits en écriture autorisés" </li>
+ <%# <% else %>
+ <%# <p> "" </p> %>
+ <% end %>
 
 
 <!-- <li>%= band.user_id.nickname %>%= band.user_id.first_name %>%= band.user_id.last_name %></li> -->

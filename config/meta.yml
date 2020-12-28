@@ -1,7 +1,7 @@
 # config/meta.yml
 
 meta_product_name: "Inspire"
-meta_title: "Inspire me baby !!!"
+meta_title: "Inspire me baby !!! - Stay cool, you're Inspired.."
 meta_description: "A cool designed toolbox, with a word clickable rhymes and synonyms generator in a real-time text-editor."
-meta_image: "inspire_banner.png" # should exist in `app/assets/images/`
+meta_image: "inspire_banner4.png" # should exist in `app/assets/images/`
 twitter_account: "@inspire_account"   # required for Twitter Cards

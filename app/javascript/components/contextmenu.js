@@ -20,8 +20,8 @@ export const contextMenu = () => {
 		li.addEventListener('click', event => {
       selection = li.innerText;
 	  test.dataset.action = selection;
-	  test.classList.toggle("rime", "synonyme");
-	        // console.log(selection);
+	//   test.classList.toggle("rime", "synonyme");
+	//         // console.log(selection);
       // console.log(test.dataset.action)
 			
     });

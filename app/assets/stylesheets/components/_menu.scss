@@ -1,17 +1,24 @@
 
   
   #menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
+    width: 250px;
+    height: 40px;
     padding: 10px 0px;
+    right:0px;
+    top: 50px;
     border-radius: 5px;
     box-shadow: 2px 2px 30px lightgrey;
     position: absolute;
-    transform-origin: center;
+    
+    // transform-origin: center;
     z-index: 2;
-    opacity: 0;
-    transform: scale(0);
-    transition: transform 0.2s, opacity 0.2s;
+    opacity: 1;
+    // transform: scale(0);
+    // transition: transform 0.2s, opacity 0.2s;
   }
   
   #menu.show {
@@ -23,6 +30,7 @@
   
   .menu-item {
     display: block;
+    height: 40px;
     padding: 10px 30px;
     transition: 0.1s;
     color: #666;

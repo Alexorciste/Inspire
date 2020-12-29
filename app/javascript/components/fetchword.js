@@ -119,9 +119,9 @@ export const rightPannelListener = (test, wordArray, action, letterNumber) => {
 	
 	test.querySelectorAll('span').forEach(span => {
 		span.addEventListener('click', event => {
-			menu.style.top = `${event.clientY}px`;
-			menu.style.left = `${event.clientX}px`;
-			menu.classList.add('show');
+			// menu.style.top = `${event.clientY}px`;
+			// menu.style.left = `${event.clientX}px`;
+			// menu.classList.add('show');
 
 			const clickWord = event.currentTarget;
 			console.log(clickWord, letterNumber);

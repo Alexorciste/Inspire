@@ -6,25 +6,35 @@ export const contextMenu = () => {
 	const item = menu.querySelectorAll('.menu-item');
   let selection = "synonymes" ;
 
-  if (spanArray) {
-	spanArray.forEach(span => {
-		span.addEventListener('contextmenu', e => {
-			e.preventDefault();
-			menu.style.top = `${e.clientY}px`;
-			menu.style.left = `${e.clientX}px`;
-			menu.classList.add('show');
-		});
-	});
+//   if (spanArray) {
+// 	spanArray.forEach(span => {
+// 		span.addEventListener('contextmenu', e => {
+// 			e.preventDefault();
+// 			menu.style.top = `${e.clientY}px`;
+// 			menu.style.left = `${e.clientX}px`;
+// 			menu.classList.add('show');
+// 		});
+	// });
 
 	item.forEach(li => {
 		li.addEventListener('click', event => {
       selection = li.innerText;
 	  test.dataset.action = selection;
+	  
+	  
 	//   test.classList.toggle("rime", "synonyme");
 	//         // console.log(selection);
       // console.log(test.dataset.action)
 			
-    });
+	});
+	
+	
+	// document.querySelectorAll('.menu-item').forEach(function(e) {
+	// 	e.addEventListener('click', function() {
+	// 	  e.classList.add("red");
+	// 	})
+	//   });
+
     
 	});
 
@@ -33,6 +43,6 @@ export const contextMenu = () => {
   });
   return test.dataset.action;
 };
-}
+// }
 
 

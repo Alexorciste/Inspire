@@ -29,6 +29,7 @@ require("@rails/actiontext")
 
 // External imports
 import "bootstrap";
+
 import { openNav } from '../components/opendiv';
 import { wordSelector } from '../components/wordselection';
 import { contextMenu } from '../components/contextmenu';

@@ -1,7 +1,7 @@
 .big-container {
   display: flex;
   // justify-content: flex-start;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bground {
@@ -11,7 +11,8 @@
   background-repeat: none;
   background-size: cover;
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
+  
 }
 
 .bgnew {
@@ -22,7 +23,7 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bgshow {
@@ -33,7 +34,7 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .bgedit {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -43,7 +44,7 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg-band-new {
@@ -54,7 +55,7 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .bgtext {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -64,7 +65,7 @@
   box-shadow: 1px 0px 10px 0px #81695d;
 
   min-width: 37%;
-  height: 100vh;
+  min-height: 100vh;
 
 }
 
@@ -89,14 +90,42 @@
     margin-left: 0;
   }
 }
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .project {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .project {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
 .project-container {
+  
   width: 100%;
 
   //box-shadow: 1px 0px 10px 0px #81695d;
 
   // margin-left: 20px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,6 +398,20 @@ padding: 30px;
   .container {
     width: 300px;
   }
+.bground{
+  display:none;
+}
+
+.bgnew{
+  display:none;
+}
+
+.bgshow{
+  display:none;
+}
+.bgtext{
+  display:none;
+}
 
   body {
     background-color: #fefefe;

@@ -2,29 +2,72 @@
 
 <%# <h1>Edit Text</h1> %>
 
-<div class="container">
+<%# <div class="container"> %>
 
-<%= render 'form', text: @text %>
-</div>
+<%# <%= render 'form', text: @text %> 
+<%# </div> %>
 
-<div class = "action-word">
+<%# <div class = "action-word">
     <label for="fname">Sonorité</label>
     <input type="text" id ="numbers" value="">
     <label for="fnames">lettres</label>
 
+</div> %>
+
+<%# <div id="test" class="synonyme" data-action="synonymes"></div> %>
+
+<%# <div id="results"> %>
+<%# </div> %>
+
+<%# <ul id="menu">
+      <li class="menu-item">synonymes</li>
+      <li class="menu-item">rimes</li>
+</ul> %>
+
+<%# <div id="out-click"></div> %>
+
+<%# <%= link_to 'Retour', project_path(@project), class: "btn btn-dark" %> 
+
+<div class="container">
+    <div class="sub-container"> 
+
+        <div id="menu">
+            <button type="button" class="btn btn-outline-secondary menu-item btn-lg ">synonymes</button>
+            <button type="button" class="btn btn-outline-secondary menu-item btn-lg ">rimes</button> 
+                
+        </div>
+
+       
+
+            
+
+        
+        
+         <div id="open-right-pannel">
+            <button type="button" class="btn btn-outline-secondary open-button btn-lg btn-lg btn-block">Open/Close Generator</button>
+        </div>
+       
+       
+
+    </div>
+     <div class = "action-word " style ="display: none;">
+            <input type="text" id ="numbers" class="form-control" placeholder="Nbre de lettres pour la rime" aria-label="Username" aria-describedby="basic-addon1"value="">
+    </div>
+
+    <%= render 'form', text: @text %>
+
+
 </div>
+
+
 
 <div id="test" class="synonyme" data-action="synonymes"></div>
 
 <div id="results">
 </div>
+<span class="close "><i class="far fa-times-circle"></i></span>
 
-<ul id="menu">
-      <li class="menu-item">synonymes</li>
-      <li class="menu-item">rimes</li>
-</ul>
 
-<div id="out-click"></div>
+<%# <div id="out-click"></div> %>
 
-<%= link_to 'Retour', project_path(@project), class: "btn btn-dark" %>
-
+<%= link_to 'Retour', project_path(@project), class: "btn btn-outline-secondary" %>

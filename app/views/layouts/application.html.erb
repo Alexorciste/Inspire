@@ -34,7 +34,9 @@
   </head>
 
   <body>
+    <% if controller_name == "pages" %>
     <%= render 'shared/navbar' %> 
+    <% end %>
     <%= render 'shared/flashes' %>
     
 

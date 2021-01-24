@@ -38,13 +38,15 @@
                         <% end %>
 
                   </div>
-
+<%# 
 <% if @project.bands.length > 0 %>
-      <p><%= link_to 'Modifier groupe', search_project_bands_path(@project) %></p>
+      <%# <p><%= link_to 'Modifier groupe', search_project_bands_path(@project) %>
+      <%# </p> %>
 
-      <% else %>
-      <p><%= link_to 'Nouveau groupe', new_project_band_path(@project), class: "text-group" %></p>
-<% end %>
+      <%# <% else %>
+      <%# <p><%= link_to 'Nouveau groupe', new_project_band_path(@project), class: "text-group" %>
+      <%# </p> %>
+<%# <% end %> 
 
 
 <p><%= link_to 'Nouveau texte', new_project_text_path(@project), class: "text-group" %></p>

@@ -19,15 +19,21 @@ const rimeWords = (data, clickWord) => {
    divBox.querySelectorAll('span').forEach(span => {
 	 	span.addEventListener('click', event => {
       let copyWord = event.currentTarget;
-      let textArea = document.createElement("textArea")
+	  let textArea = document.createElement("textArea")
+	  const close = document.querySelector(".close");
+	  
       textArea.value = copyWord.textContent
       document.body.appendChild(textArea)
       textArea.select()
       document.execCommand('copy')
-      textArea.remove()
+	  textArea.remove()
+	  divBox.classList.remove('active');
+	  close.classList.remove('active');
+	  
+
      });
    })
-
+   
   // return data;
 };
 
@@ -52,7 +58,9 @@ const swapWords = (data, clickWord) => {
 
       clickWord.innerText = newWord + ' ';
       const divText = document.querySelector('#text_content > div');
-      const wordArray = divText.innerText.split(/[\s,;:']+/);
+	  const wordArray = divText.innerText.split(/[\s,;:']+/);
+	  const close = document.querySelector(".close");
+
 			var regex = new RegExp(`${keyWord}`, 'g');
 			for (var i = 0; i < wordArray.length; i++) {
 				if (keyWord === wordArray[i]) {
@@ -61,6 +69,8 @@ const swapWords = (data, clickWord) => {
 
 			}
 			divText.innerText = test.innerText;
+			divBox.classList.remove('active');
+			close.classList.remove('active');
 
 		});
 	});
@@ -71,8 +81,11 @@ const swapWords = (data, clickWord) => {
 export const synonymScrapping = (test, clickWord, wordArray, action,letterNumber) => {
 	let keyWord = clickWord.innerText;
 	const divBox = document.querySelector('#results');
+	const close = document.querySelector(".close");
 
   divBox.classList.add('active');
+  close.classList.add('active');
+
   console.log(test.dataset.action)
   // fetch(`http://${window.location.host}/api/v1/synonymes?keyword=${keyWord}`)
 	// test.dataset.action = "synonymes";

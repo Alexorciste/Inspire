@@ -1,14 +1,15 @@
 const openNav = () => {
    
     
-    const divBox = document.querySelector("#results");
-    redButton.addEventListener("click", (event) => {
-      divBox.classList.toggle("active");
-      
-      
-    });
-    
-  
-  };
+  const test = document.querySelector("#test");
+  const openDivButton = document.querySelector(".open-button")
+
+
+  openDivButton.addEventListener("click", (event) => {
+    console.log(event)
+    test.classList.toggle("active");
+});
+
+};
 
 export { openNav };

@@ -29,7 +29,7 @@ require("@rails/actiontext")
 
 // External imports
 import "bootstrap";
-
+import { closeNav } from '../components/closediv';
 import { openNav } from '../components/opendiv';
 import { wordSelector } from '../components/wordselection';
 import { contextMenu } from '../components/contextmenu';
@@ -42,6 +42,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // openNav();
+  openNav();
+  closeNav();
   wordSelector();
   contextMenu();
   // liSelector();

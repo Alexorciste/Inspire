@@ -142,6 +142,11 @@
   
   // margin-left: auto;
   // margin-right: auto;
+  min-height: 100vh;
+}
+
+.sub-container{
+  min-height: 100 vh;
 }
 
 .text-editor {
@@ -486,7 +491,19 @@ padding: 30px;
     width: 300px;
   }
 
+  .bground{
+    display: none;
+  }
   
+  .bgshow{
+    display: none;
+  }
+  .bgnew{
+    display: none;
+  }
+  .bgtext{
+    display: none;
+  }
   #test {
     
     width: 0px;

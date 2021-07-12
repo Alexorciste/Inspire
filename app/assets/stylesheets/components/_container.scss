@@ -47,7 +47,7 @@
 }
 
 .bg-band-new {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     image-url("band-new-inspire.jpg");
   background-repeat: none;
   background-size: cover;
@@ -56,6 +56,7 @@
   min-width: 37%;
   min-height: 100vh;
 }
+
 .bgtext {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     image-url("text-write-inspire.jpg");

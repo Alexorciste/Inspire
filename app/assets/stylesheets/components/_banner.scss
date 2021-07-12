@@ -4,14 +4,15 @@
   justify-content: space-around;
   align-items: center;
 background-size: cover;
-background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("back-image.jpg");
+background-image: url("clouds.jpg");
 background-position: center;
 
 
-h2 {
+h1 {
     color: white;
-    font-weight: bold;
-    font-size: 45px;
+    font-weight: lighter;
+    font-size: 90px;
+    opacity: 0.8;
   }
    p {
     color: white;
@@ -25,6 +26,12 @@ h2 {
   }
 }
 
+h1:hover{
+  opacity: 1;
+
+
+
+}
 
 
 

@@ -1,8 +1,10 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 <div class="banner">
   <div class="banner-content text-center">
-<h2>Inspire Me Baby...</h2>
-<%= link_to "Commencez", projects_path, class: "btn btn-lg btn-primary"  %>
+
+<%= link_to projects_path do  %>
+<h1 class="inspire-title">Inspire Me Baby...</h2>
+<% end %>
 </div>
 </div>
 <%= content_for(:footer_class, "footer-home") %>

@@ -29,7 +29,7 @@ text-shadow: 3px 2px 7px #878b8b;
 h1 {
     color: white;
     font-weight: lighter;
-    font-size: 90px;
+    font-size: 120px;
     opacity: 0.8;
     text-shadow: 3px 2px 7px #878b8b;
   }
@@ -57,5 +57,24 @@ h1:hover{
 
 }
 
+.inspire-subtitle {
+  color:white;
+  font-family: Montserrat;
+  text-shadow: 3px 2px 7px #878b8b;
+  font-weight: bold;
+}
 
+.fa-user{
+  color:white;
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:37px;
+  opacity:0.9;
+}
 
+.fa-user:hover{
+  opacity:1;
+  color:white;
+
+}

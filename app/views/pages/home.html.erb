@@ -3,9 +3,10 @@
   <div class="banner-content text-center">
 
 <%= link_to projects_path do  %>
-<h1 class="inspire-title">Inspire Me Baby...</h2>
+<h1 class="inspire-title">INSPIRE</h2>
 <% end %>
-  <br />
+
+<h2 class="inspire-subtitle">Stay cool, you're Inspired...</h2>
 <ul class="mr-auto-new">
       <% if user_signed_in? %>
         <span class=" nav-link-color">Bienvenue <%= current_user.nickname %></span>
@@ -29,7 +30,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: " nav-link-color" %>
+          <%= link_to "", new_user_session_path, class: " fas fa-user " %>
         </li>
       <% end %>
     </ul>

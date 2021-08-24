@@ -1,31 +1,35 @@
 
 
-<%= content_for(:navbar_class, "project-home") %>
+<%# <%= content_for(:navbar_class, "project-home") %> 
 
 
 
-<div class="big-container">
+<div class="banner">
+  
 
-  <div class="bground">
+
+    <h1 class="inspire-title">INSPIRE</h2>
+
+    <h2 class="inspire-subtitle">Stay cool, you're Inspired...</h2>
+  <%# <div class="bground"> %>
   <!--div close bground-->
-  </div>
+  <%# </div> %>
 
-  <div class = "project-container">
+  <%# <div class = "project-container"> %>
     <!-- <h1>Mes projets</h1> !-->
-        <h1 class=text-center>Mes Projets</h1>
 
         
-        
+    <div class="container">    
 
       <div class="project">
 
         <% @projects.each do |project| %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80)">
+          <div class="card-category">
 
 
             <li>
             <%= link_to project, class: "card-title" do %>
-            <%= project.title %></li>
+            <%= project.title %>
             <% end %>
 
             <div class="icons">
@@ -43,27 +47,32 @@
             <%= link_to project, method: :delete, data: { confirm: 'Êtes-vous sûr-e ?' }, class: "text" do %>
             <i class="far fa-trash-alt"></i>
             <% end %>
-            <% end %>
-            </div>
-            </div>
+            <% end %></li>
+            <%# </div> %>
+          </div>
 
-            <% end %>
+        <% end %>
 
 
 
 
           <!--div close projet-->
-          </div>
+      </div>
           
 
-          <% if policy(Project).create? %>
-          <p><%= link_to 'Créer un nouveau projet', new_project_path, class: "btn btn-dark" %></p>
-          <% end %>
+       <% if policy(Project).create? %>
+          <p><%= link_to 'Créer un nouveau projet', new_project_path, class: "btn btn-ghost" %></p>
+  <% end %>
+     
 
 
     <!--div close project container-->
-     </div>
+     <%# </div> %>
 
 <!--close-big-container-->
+  </div>
 </div>
+
+
+
 

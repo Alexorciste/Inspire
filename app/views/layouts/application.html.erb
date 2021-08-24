@@ -37,14 +37,14 @@
   </head>
 
   <body>
-    <% if controller_name == "pages" %>
-    <%= render 'shared/navbar' %> 
-    <% end %>
+    <%# <% if controller_name == "pages" %> 
+    <%# <%= render 'shared/navbar' %> 
+    <%# <% end %>
     <%= render 'shared/flashes' %>
     
 
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%# <%= render 'shared/footer' %>
     
   </body>
 </html>

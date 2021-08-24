@@ -1,0 +1,53 @@
+.card-category {
+    background-size: cover;
+    background-position: center;
+    background-color: #4c718b;
+    // background-color: #343a40;
+    // opacity: 0.9;
+    height: 111px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    // font-weight: bold;
+    // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    box-shadow: -3px 2px 26px 0px rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.2s; /* Animation */
+    position: relative;
+    border-radius: 20px;
+    
+  }
+  
+  .card-category i {
+    font-size: 15px;
+    margin-left: 10px;
+    color: #eeeeeead;
+  }
+  
+  .card-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    color: honeydew;
+  }
+  
+  .card-title:hover {
+    color: whitesmoke;
+  }
+  
+  .icons {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+  }
+  
+  .card-category:hover {
+    transform: scale(1.05);
+  }
+  

@@ -9,8 +9,9 @@ require 'json'
 class Api::V1::SynonymesController < Api::V1::BaseController
   def find_synonyme
     url = "http://1001synonymes.fr/synonyme-#{params[:keyword]}"
-    url = URI.parse(URI.escape(url))
-    response = open(url).read
+    
+    #link = URI.parse(URI.escape(url))
+    response = URI.open(url)
     html_doc = Nokogiri::HTML(response)
     synonymes = []
     html_doc.search(".field-item").each do |element|

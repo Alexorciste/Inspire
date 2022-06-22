@@ -10,29 +10,27 @@ class TextsController < ApplicationController
 
   def new
     @text = Text.new
-    @project = Project.find(params[:project_id])
     authorize @text
   end
 
   def create
     @text = Text.new(text_params)
-    @text.project = Project.find(params[:project_id])
+    @text.user = current_user
     authorize @text
 
     if @text.save
-      redirect_to project_path(@text.project), notice: 'Le texte a été créé.'
+      redirect_to text_path(@text), notice: 'Le texte a été créé.'
     else
       render :new
     end
   end
 
   def edit
-    @project = @text.project
   end
 
   def update
     if @text.update(text_params)
-      redirect_to project_path(@text.project), notice: 'Le texte a été modifié.'
+      redirect_to text_path(@text), notice: 'Le texte a été modifié.'
     else
       render :edit
     end
@@ -40,7 +38,7 @@ class TextsController < ApplicationController
 
   def destroy
     @text.destroy
-    redirect_to project_path(@text.project_id), notice: 'Le texte a été supprimé.'
+    redirect_to texts_path, notice: 'Le texte a été supprimé.'
   end
 
   def fetchword
@@ -49,10 +47,8 @@ class TextsController < ApplicationController
   private
 
   def set_text
-
     @text = Text.find(params[:id])
     authorize @text
-
   end
 
   def text_params

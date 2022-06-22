@@ -1,10 +1,10 @@
 
 <div class="box">
 
-<h3>Récap de mes projets</h3>
-<p><%= @project.title %></p>
+<h3>Récap de mes textes</h3>
+
 <ul>
-<% @project.texts.each do |text| %>
+<% @texts.each do |text| %>
       <li><%= text.title %></li>
       <%= link_to 'Voir', sekret_text_path(text) %>
       <%= link_to 'Modifier', edit_sekret_text_path(text) %>

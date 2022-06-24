@@ -33,30 +33,11 @@ import { closeNav } from '../components/closediv';
 import { openNav } from '../components/opendiv';
 import { wordSelector } from '../components/wordselection';
 import { contextMenu } from '../components/contextmenu';
-// import { liSelector } from '../components/wordselection';
-// import { synonymeScraping } from '../components/fetchword';
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
-  // openNav();
   openNav();
   closeNav();
   wordSelector();
   contextMenu();
-  // liSelector();
-  // synonymeScraping();
-
 });
-
-
-
-
-// const synonyme = document.getElementById('synonyme-btn')
-// if (synonyme) {
-// synonyme.addEventListener('onclick', () => {
-//   synonymeScraping();
-// )}
-// };

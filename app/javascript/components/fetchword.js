@@ -1,5 +1,5 @@
 import { contextMenu } from './contextmenu'
- 
+
 const rimeWords = (data, clickWord) => {
   const divBox = document.querySelector('#results');
   let keyWord = clickWord.innerText;
@@ -17,7 +17,7 @@ const rimeWords = (data, clickWord) => {
       let copyWord = event.currentTarget;
 	  let textArea = document.createElement("textArea")
 	  const close = document.querySelector(".close");
-	  
+
       textArea.value = copyWord.textContent
       document.body.appendChild(textArea)
       textArea.select()
@@ -79,8 +79,8 @@ if(test.dataset.action === "synonymes" || test.dataset.action === "rimes") {
 	if(test.dataset.action === "rimes") {
 	 	keyWord = keyWord.slice(-letterNumber);
 	 	console.log(letterNumber)
-		} 
-		fetch(`http://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
+		}
+		fetch(`https://${window.location.host}/api/v1/${test.dataset.action}?keyword=${keyWord}`)
 			.then(response => {
 				return response.json();
 			})
@@ -107,7 +107,7 @@ export const cutWord = () => {
   }
 
 export const rightPannelListener = (test, wordArray, action, letterNumber) => {
-	
+
 	test.querySelectorAll('span').forEach(span => {
 		span.addEventListener('click', event => {
 			const clickWord = event.currentTarget;
